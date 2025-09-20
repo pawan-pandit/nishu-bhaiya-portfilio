@@ -56,3 +56,13 @@
 .doner {
   font-family: 'doner', cursive;
 }
+
+
+@font-face {
+  font-family: 'inter';
+  src: url('/fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+
+}
+.inter {
+  font-family: 'inter', cursive;
+}

@@ -33,7 +33,7 @@ export const BoxReveal = ({
   }, [isInView, mainControls, slideControls]);
 
   return (
-    <div ref={ref} style={{ position: "relative", width, overflow: "hidden" }} className=" tracking-wider doner">
+    <div ref={ref} style={{ position: "relative", width, overflow: "hidden" }} className=" tracking-wider inter">
       <motion.div
         variants={{
           hidden: { opacity: 0, y: 75 },

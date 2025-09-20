@@ -22,32 +22,33 @@ const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
             className={`transition-colors duration-500 ${theme === "black" ? "bg-black text-white" : "bg-[#f8f1f3] text-black"
                 }`}
         >
-            <nav className="flex items-center justify-between px-4 sm:px-6 lg:px-10 py-6 lg:py-10 mx-auto doner">
+            <nav className="flex items-center justify-between px-4 sm:px-6 lg:px-10 py-6 lg:py-10 mx-auto inter ">
                 {/* Logo */}
                 <div className="relative flex items-center">
-  {/* Text on top */}
-  <motion.a
+                    <img   src={theme === "black" ? "/logo1.svg" : "/logo6.png"}
+                            alt="10xGrowth Logo" className="h-20 w-20 bg-[#f8f1f3]"/>
+                    {/* <motion.a
     href="https://www.10xgrowth.club/"
-    className="relative z-10 flex items-center gap-2 text-xl sm:text-2xl md:text-3xl font-bold uppercase doner tracking-wider hover:text-green-600 transition"
+    className="relative z-10 flex items-center gap-2 text-xl sm:text-2xl md:text-3xl font-bold uppercase  tracking-wider hover:text-green-600 transition"
     initial={{ opacity: 0, y: -20 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.6 }}
   >
     10xGrowth.Club
-  </motion.a>
+  </motion.a> */}
 
-  {/* Background image */}
-  <div className="absolute inset-0 w-full h-20 opacity-20 pointer-events-none">
-    <Image
-      src={theme === "black" ? "/logo1.svg" : "/logo3.png"} // dynamically choose image
-      alt="10xGrowth Logo"
-      fill
-      className="object-contain object-center "
-      priority
-    />
+                    {/* Background image */}
+                    {/* <div className="relative w-full h-20 opacity-20 pointer-events-none">
+                        <Image
+                            src={theme === "black" ? "/logo1.svg" : "/logo4.png"}
+                            alt="10xGrowth Logo"
+                            fill
+                            className="object-contain object-center  "
+                            priority
+                        />
 
-  </div>
-</div>
+                    </div> */}
+                </div>
 
                 {/* Button (desktop) */}
                 <motion.div
@@ -56,28 +57,27 @@ const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
                 >
-                    <motion.button
+                    <motion.div
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className={`px-2 sm:px-6 py-1 plus uppercase rounded-md  font-bold transition text-sm sm:text-base 
+                        className={`px-2 sm:px-6 py-1  uppercase rounded-md  font-bold transition text-sm sm:text-base 
               ${theme === "black"
                                 ? "bg-green-600 text-white hover:bg-green-700 border border-white"
                                 : "border border-black text-green-500 hover:bg-green-600 hover:text-white hover:border-green-400"
                             }`}
                     >
-                                              <ShinyButton theme={theme} className="uppercase">Apply now</ShinyButton>
+                        <ShinyButton theme={theme} className="uppercase">Claim Your Spot</ShinyButton>
 
-                    </motion.button>
+                    </motion.div>
                 </motion.div>
             </nav>
 
             <motion.section
-                className="relative overflow-hidden px-4 sm:px-6 lg:px-10 py-20 mx-auto "
+                className="relative overflow-hidden px-4 sm:px-6 lg:px-10 py-20 mx-auto  inter"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
             >
-                {/* Background Logo */}
 
 
 
@@ -85,13 +85,13 @@ const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
                 {/* Foreground Content */}
                 <div className="relative z-10 ">
                     <motion.h2
-                        className="text-4xl md:text-5xl lg:text-6xl xl:text-8xl uppercase tracking-wider font-extrabold doner mb-6"
+                        className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl uppercase tracking-wider doner font-black  mb-6"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.6 }}
                     >
-                        Get More Views.
-                        Build Better Offers & <MorphingText texts={texts} />
+                        Get  <strong className="text-green-600 font-black">  More Views </strong> <br/>
+                        Build Better Offer<br/> Turn Content Into <strong className="text-green-600 font-black"> Clients</strong>
                     </motion.h2>
 
                     <div className="relative mx-auto mt-8">
@@ -103,15 +103,12 @@ const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
                                 width="100%"
                             >
                                 <motion.p
-                                    className="text-sm md:text-lg opacity-90 max-w-2xl leading-relaxed"
+                                    className="text-sm md:text-lg opacity-90 max-w-4xl leading-relaxed"
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.6, delay: 0.8 }}
                                 >
-                                    This isn&apos;t another course — it&apos;s a complete growth system ...
-                                    designed to
-                                    get you more views on YouTube & Instagram, build offers that actually
-                                    sell, and finally turn your audience into income.
+                                  This isn't another "watch and figure it out alone" course like other coaches offer that leaves you stuck and alone.
                                 </motion.p>
                             </BoxReveal>
 
@@ -121,19 +118,17 @@ const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
                                 width="100%"
                             >
                                 <motion.p
-                                    className="text-sm md:text-lg opacity-80c max-w-3xl leading-relaxed"
+                                    className="text-sm md:text-lg opacity-80c max-w-4xl leading-relaxed"
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.6, delay: 1.0 }}
                                 >
-                                    And you won&apos;t be left to figure it out alone. This is a done-with-you
-                                    program — with 1:1 strategy calls, private sessions, and hands-on
-                                    support so you always know exactly what to do next.
+                                   This is a done-with-you program with <strong className=" italic"> 1:1 strategy calls, private sessions, and step-by-step guidance — </strong>so you can create videos in just 2 hours a week, grow your audience, get more views and start making money from your content.
                                 </motion.p>
                             </BoxReveal>
                         </div>
 
-                        <div className="absolute inset-0 md:inset-y-0 md:right-0 w-full h-64 md:h-full opacity-10 pointer-events-none">
+                        {/* <div className="absolute inset-0 md:inset-y-0 md:right-0 w-full h-64 md:h-full opacity-10 pointer-events-none">
                             <Image
                                 src={theme === "black" ? "/logo1.svg" : "/logo3.png"} // dynamically choose image
                                 alt="10xGrowth Logo"
@@ -142,9 +137,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
                                 priority
                             />
 
-                            {/* Optional gradient overlay to make text readable */}
                             <div className="absolute inset-0 bg-gradient-to-l from-black/40 via-transparent to-transparent md:from-transparent pointer-events-none" />
-                        </div>
+                        </div> */}
 
                     </div>
 
@@ -155,7 +149,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 1.2 }}
                     >
-                      <ShinyButton theme={theme}>Join Before It&apos;s Gone</ShinyButton>
+                        <ShinyButton theme={theme}>Join Before It&apos;s Gone</ShinyButton>
 
                     </motion.div>
                 </div>

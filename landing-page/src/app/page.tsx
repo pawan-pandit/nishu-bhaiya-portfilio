@@ -35,7 +35,7 @@ export default function Home() {
       }`}
     >
       {/* Preloader */}
-      <AnimatePresence mode="wait">{isLoading && <Preloader key="preloader" />}</AnimatePresence>
+      {/* <AnimatePresence mode="wait">{isLoading && <Preloader key="preloader" />}</AnimatePresence> */}
 
       {/* Main Content - Only show after preloader finishes */}
       <AnimatePresence>

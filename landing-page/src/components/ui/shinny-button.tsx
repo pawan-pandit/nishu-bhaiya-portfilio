@@ -33,19 +33,18 @@ interface ShinyButtonProps extends Omit<React.HTMLAttributes<HTMLButtonElement>,
 
 export const ShinyButton = React.forwardRef<HTMLButtonElement, ShinyButtonProps>(
   ({ children, className, theme = "black", ...props }, ref) => {
-    const bgColor = theme === "black" ? "#00a63e" : "#ffffff"
+    const bgColor = theme === "black" ? "#00a63e" : "#00a63e"
     const primaryShimmer = theme === "black" ? "rgba(255,255,255,0.9)" : "rgba(16,185,129,0.8)"
     const secondaryShimmer = theme === "black" ? "rgba(255,255,255,0.6)" : "rgba(34,197,94,0.6)"
     const accentShimmer = theme === "black" ? "rgba(255,255,255,0.3)" : "rgba(59,130,246,0.4)"
-    const textColor = theme === "black" ? "#000" : "#000"
+    const textColor = theme === "black" ? "#ffffff" : "#ffffff"
     const borderColor = theme === "black" ? "#10b981" : "#e5e7eb"
-    const glowColor = theme === "black" ? "rgba(16,185,129,0.4)" : "rgba(59,130,246,0.3)"
 
     return (
       <motion.button
         ref={ref}
         className={cn(
-          "relative cursor-pointer doner w-full rounded-md px-6 py-2 font-medium border transition-all duration-300 ease-in-out backdrop-blur-xl hover:shadow-lg overflow-hidden",
+          "relative cursor-pointer doner tracking-wider w-full rounded-md px-6 py-2 font-bold border transition-all duration-300 ease-in-out overflow-hidden",
           className,
         )}
         style={
@@ -53,7 +52,7 @@ export const ShinyButton = React.forwardRef<HTMLButtonElement, ShinyButtonProps>
             backgroundColor: bgColor,
             borderColor: borderColor,
             "--primary": bgColor,
-            boxShadow: `0 0 20px ${glowColor}, 0 4px 15px rgba(0,0,0,0.1)`,
+            // boxShadow: `0 0 20px ${glowColor}, 0 4px 15px rgba(0,0,0,0.1)`,
           } as React.CSSProperties
         }
         {...animationProps}
