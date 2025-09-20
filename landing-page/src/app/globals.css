@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'plus';
+  src: url('/fonts/plus.ttf') format('truetype');
+
+}
+.plus {
+  font-family: 'plus', cursive;
+}
+
+
+@font-face {
+  font-family: 'honk';
+  src: url('/fonts/Honk-Regular-VariableFont_MORF,SHLN.ttf') format('truetype');
+
+}
+.honk {
+  font-family: 'honk', cursive;
+}
+
+@font-face {
+  font-family: 'anton';
+  src: url('/fonts/Anton-Regular.ttf') format('truetype');
+
+}
+.anton {
+  font-family: 'anton', cursive;
+}
+
+
+@font-face {
+  font-family: 'roboto';
+  src: url('/fonts/RobotoMono-VariableFont_wght.ttf') format('truetype');
+
+}
+.roboto {
+  font-family: 'roboto', cursive;
+}
+
+@font-face {
+  font-family: 'archivo';
+  src: url('/fonts/ArchivoBlack-Regular.ttf') format('truetype');
+
+}
+.archivo {
+  font-family: 'archivo', cursive;
+}
+
+
+@font-face {
+  font-family: 'doner';
+  src: url('/fonts/Doner-RegularDisplay.otf') format('truetype');
+
+}
+.doner {
+  font-family: 'doner', cursive;
+}
