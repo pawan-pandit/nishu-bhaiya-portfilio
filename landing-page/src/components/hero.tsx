@@ -6,6 +6,7 @@ import { MorphingText } from "./ui/flipword"
 import { BoxReveal } from "./ui/box-revel"
 import Image from "next/image"
 import { ShinyButton } from "./ui/shinny-button"
+import { PulsatingButton } from "./ui/pulse-button"
 
 interface HeroSectionProps {
     theme: "black" | "white"
@@ -25,8 +26,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
             <nav className="flex items-center justify-between px-4 sm:px-6 lg:px-10 py-6 lg:py-10 mx-auto inter ">
                 {/* Logo */}
                 <div className="relative flex items-center">
-                    <img   src={theme === "black" ? "/logo1.svg" : "/logo6.png"}
-                            alt="10xGrowth Logo" className="h-20 w-20 bg-[#f8f1f3]"/>
+                    <img src={theme === "black" ? "/logo1.svg" : "/logo6.png"}
+                        alt="10xGrowth Logo" className="h-20 w-20 bg-[#f8f1f3]" />
                     {/* <motion.a
     href="https://www.10xgrowth.club/"
     className="relative z-10 flex items-center gap-2 text-xl sm:text-2xl md:text-3xl font-bold uppercase  tracking-wider hover:text-green-600 transition"
@@ -60,13 +61,11 @@ const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
                     <motion.div
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className={`px-2 sm:px-6 py-1  uppercase rounded-md  font-bold transition text-sm sm:text-base 
-              ${theme === "black"
-                                ? "bg-green-600 text-white hover:bg-green-700 border border-white"
-                                : "border border-black text-green-500 hover:bg-green-600 hover:text-white hover:border-green-400"
-                            }`}
+                        className={`  uppercase archivo tracking-wider  rounded-md  
+            bg-green-600 hover:bg-green-600 px-4 py-2 text-center text-white hover:border-green-400
+                            `}
                     >
-                        <ShinyButton theme={theme} className="uppercase">Claim Your Spot</ShinyButton>
+                       Claim Your Spot
 
                     </motion.div>
                 </motion.div>
@@ -82,7 +81,6 @@ const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
 
 
 
-                {/* Foreground Content */}
                 <div className="relative z-10 ">
                     <motion.h2
                         className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl uppercase tracking-wider doner font-black  mb-6"
@@ -90,12 +88,11 @@ const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.6 }}
                     >
-                        Get  <strong className="text-green-600 font-black">  More Views </strong> <br/>
-                        Build Better Offer<br/> Turn Content Into <strong className="text-green-600 font-black"> Clients</strong>
+                        Get  <strong className="text-green-600 font-black">  More Views </strong> <br />
+                        Build Better Offer<br /> Turn Content Into <strong className="text-green-600 font-black"> Clients</strong>
                     </motion.h2>
 
                     <div className="relative mx-auto mt-8">
-                        {/* Paragraph container */}
                         <div className="relative z-10   space-y-6">
                             <BoxReveal
                                 boxColor={theme === "black" ? "#10b981" : "#059669"}
@@ -108,7 +105,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.6, delay: 0.8 }}
                                 >
-                                  This isn't another "watch and figure it out alone" course like other coaches offer that leaves you stuck and alone.
+                                    This isn&apos;t another &quot;watch and figure it out alone&quot; course like other coaches offer that leaves you stuck and alone.
                                 </motion.p>
                             </BoxReveal>
 
@@ -123,7 +120,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.6, delay: 1.0 }}
                                 >
-                                   This is a done-with-you program with <strong className=" italic"> 1:1 strategy calls, private sessions, and step-by-step guidance — </strong>so you can create videos in just 2 hours a week, grow your audience, get more views and start making money from your content.
+                                    This is a done-with-you program with <strong className=" italic"> 1:1 strategy calls, private sessions, and step-by-step guidance — </strong>so you can create videos in just 2 hours a week, grow your audience, get more views and start making money from your content.
                                 </motion.p>
                             </BoxReveal>
                         </div>
@@ -144,14 +141,24 @@ const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
 
 
                     <motion.div
-                        className="my-6 max-w-md"
+                        className="mt-6 max-w-2xl "
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 1.2 }}
+                        // transition={{ duration: 0.6, delay: 1.2 }}
+                      
                     >
-                        <ShinyButton theme={theme}>Join Before It&apos;s Gone</ShinyButton>
+                        <PulsatingButton theme={theme} className="uppercase ">Join Before It&apos;s Gone</PulsatingButton>
 
                     </motion.div>
+
+                    <motion.p className="my-2 px-2 py-1 italic rounded-md text-sm md:text-base opacity-80c max-w-2xl  text-gray-800 leading-relaxed "
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 1.0 }}>
+                        Spots are limited <strong>  ( 8 spots left )</strong> — let’s grow your personal brand together.
+                    </motion.p>
                 </div>
             </motion.section>
 
