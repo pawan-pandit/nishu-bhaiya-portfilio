@@ -49,7 +49,7 @@ const GuideSection: React.FC<GuideSectionProps> = ({ theme }) => {
       x: 0,
       transition: {
         duration: 0.5,
-        ease: [0.25, 0.1, 0.25, 1]  as [number, number, number, number],
+        ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number],
       },
     },
   }
@@ -61,7 +61,8 @@ const GuideSection: React.FC<GuideSectionProps> = ({ theme }) => {
       }`}
       variants={containerVariants}
       initial="hidden"
-      animate="visible"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
     >
       <motion.h2
         className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl uppercase tracking-wider doner font-black     pb-10 md:pb-20 "
@@ -74,26 +75,20 @@ const GuideSection: React.FC<GuideSectionProps> = ({ theme }) => {
         className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl  tracking-wider opacity-90 doner leading-relaxed   uppercase   font-black mb-4 lg:mb-6 text-left"
         variants={itemVariants}
       >
-A proven system to grow on Instagram and YouTube — and turn views into paid clients… by creating videos in just 2 hours a week.
+        A proven system to grow on Instagram and YouTube — and turn views into paid clients… by creating videos in just
+        2 hours a week.
       </motion.p>
-
-    
 
       <div className="w-full  grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16">
         {/* Left Column - Problem Section */}
-        
+
         <motion.div className="space-y-6 lg:space-y-8" variants={itemVariants}>
-      
-         
           <motion.h3
             className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl doner  tracking-wider font-black mb-6 lg:mb-8 text-left"
             variants={itemVariants}
           >
-Most creators and entrepreneurs don&apos;t fail because of effort.
-</motion.h3>
-
-          
-          
+            Most creators and entrepreneurs don&apos;t fail because of effort.
+          </motion.h3>
 
           <motion.p
             className="text-sm sm:text-base md:text-lg lg:text-xl inter font-semibold opacity-90 leading-relaxed text-left mb-6"
@@ -102,28 +97,25 @@ Most creators and entrepreneurs don&apos;t fail because of effort.
             They fail because they&apos;re guessing.
           </motion.p>
 
-          <motion.ul className="space-y-3 lg:space-y-4 text-left inter text-sm md:text-lg opacity-90 leading-relaxed" variants={listVariants}>
-            <motion.li
-              className=" flex items-start gap-3 "
-              variants={listItemVariants}
-            >
+          <motion.ul
+            className="space-y-3 lg:space-y-4 text-left inter text-sm md:text-lg opacity-90 leading-relaxed"
+            variants={listVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            <motion.li className=" flex items-start gap-3 " variants={listItemVariants}>
               <span className="text-[#FFD700] ">👉</span>
               Guessing what niche their personal brand should stand for.
-              </motion.li>
-            <motion.li
-              className=" flex items-start gap-3"
-              variants={listItemVariants}
-            >
+            </motion.li>
+            <motion.li className=" flex items-start gap-3" variants={listItemVariants}>
               <span className="text-[#FFD700] ">👉</span>
               Guessing what topics will actually attract the right audience.
-              </motion.li>
-            <motion.li
-              className=" flex items-start gap-3"
-              variants={listItemVariants}
-            >
+            </motion.li>
+            <motion.li className=" flex items-start gap-3" variants={listItemVariants}>
               <span className="text-[#FFD700] ">👉</span>
               Guessing how to turn that audience into customers and real business revenue.
-              </motion.li>
+            </motion.li>
           </motion.ul>
 
           <motion.p
@@ -134,8 +126,12 @@ Most creators and entrepreneurs don&apos;t fail because of effort.
           </motion.p>
         </motion.div>
 
-        <motion.div className={`space-y-6 lg:space-y-8 bg-white p-6 rounded-lg ${
-        theme === "black" ? "bg-black text-white" : "bg-[#f8f1f3] text-black"} `} variants={itemVariants}>
+        <motion.div
+          className={`space-y-6 lg:space-y-8 bg-white p-6 rounded-lg ${
+            theme === "black" ? "bg-black text-white" : "bg-[#f8f1f3] text-black"
+          } `}
+          variants={itemVariants}
+        >
           <motion.h3
             className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl doner  tracking-wider font-black mb-6 lg:mb-8 text-left"
             variants={itemVariants}
@@ -146,6 +142,7 @@ Most creators and entrepreneurs don&apos;t fail because of effort.
           <motion.ul
             className="space-y-3 sm:space-y-4 md:space-y-5 text-left text-sm md:text-lg inter opacity-90 leading-relaxed"
             variants={listVariants}
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
           >
@@ -163,11 +160,11 @@ Most creators and entrepreneurs don&apos;t fail because of effort.
             </motion.li>
             <motion.li className="flex items-start gap-2 sm:gap-3" variants={listItemVariants}>
               <span className="text-[#FFD700] text-sm sm:text-base flex-shrink-0 mt-0.5">👉</span>
-              <span>Build content for youtube & instagram in just 2 hours per week</span>
+              <span>Build content for youtube & instagram in just <strong>2 hours per week</strong></span>
             </motion.li>
             <motion.li className="flex items-start gap-2 sm:gap-3" variants={listItemVariants}>
               <span className="text-[#FFD700] text-sm sm:text-base flex-shrink-0 mt-0.5">👉</span>
-              <span>Write hooks and scripts like an expert — even if you&apos;re not a writer</span>
+              <span>Write <strong>hooks and scripts </strong>like an expert — even if you&apos;re not a writer</span>
             </motion.li>
             <motion.li className="flex items-start gap-2 sm:gap-3" variants={listItemVariants}>
               <span className="text-[#FFD700] text-sm sm:text-base flex-shrink-0 mt-0.5">👉</span>
@@ -196,6 +193,9 @@ Most creators and entrepreneurs don&apos;t fail because of effort.
               borderColor: theme === "black" ? "rgba(255, 215, 0, 0.3)" : "rgba(0, 0, 0, 0.1)",
             }}
             variants={itemVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.3 }}
           >

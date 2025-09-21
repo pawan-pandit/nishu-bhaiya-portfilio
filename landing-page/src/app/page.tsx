@@ -7,6 +7,7 @@ import { Menu, X } from "lucide-react"
 import Preloader from "@/components/Preloader/page"
 import HeroSection from "@/components/hero"
 import GuideSection from "@/components/guide-lines"
+import AboutSection from "@/components/about"
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true)
@@ -167,7 +168,13 @@ export default function Home() {
             >
               <GuideSection theme={theme} />
             </motion.div>
-
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <AboutSection theme={theme} />
+            </motion.div>
           
           </motion.div>
         )}
