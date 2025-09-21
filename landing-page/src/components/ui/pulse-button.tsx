@@ -19,7 +19,7 @@ export const PulsatingButton = React.forwardRef<
         theme = "black",
       className,
       children,
-      pulseColor = "#f0ee0c",
+      pulseColor = "#FFD700",
       duration = "1.5s",
       ...props
     },
@@ -29,7 +29,7 @@ export const PulsatingButton = React.forwardRef<
       <button
         ref={ref}
         className={cn(
-          "relative flex cursor-pointer items-center justify-center w-full  archivo tracking-wider rounded-md bg-green-600 px-4 py-2 text-center text-white",
+          "relative flex cursor-pointer items-center justify-center w-full  archivo tracking-wider rounded-md bg-[#00e13c] px-4 py-2 text-center text-white",
           className,
         )}
         style={

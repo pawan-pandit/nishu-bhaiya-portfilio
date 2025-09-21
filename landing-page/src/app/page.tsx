@@ -6,6 +6,7 @@ import { AnimatePresence, motion } from "framer-motion"
 import { Menu, X } from "lucide-react"
 import Preloader from "@/components/Preloader/page"
 import HeroSection from "@/components/hero"
+import GuideSection from "@/components/guide-lines"
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true)
@@ -157,6 +158,14 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <HeroSection theme={theme} />
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <GuideSection theme={theme} />
             </motion.div>
 
           

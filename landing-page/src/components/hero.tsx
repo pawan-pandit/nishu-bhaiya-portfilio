@@ -26,7 +26,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
             <nav className="flex items-center justify-between px-4 sm:px-6 lg:px-10 py-6 lg:py-10 mx-auto inter ">
                 {/* Logo */}
                 <div className="relative flex items-center">
-                    <img src={theme === "black" ? "/logo1.svg" : "/logo6.png"}
+                    <img src={theme === "black" ? "/logo1.svg" : "/logo7.png"}
                         alt="10xGrowth Logo" className="h-20 w-20 bg-[#f8f1f3]" />
                     {/* <motion.a
     href="https://www.10xgrowth.club/"
@@ -62,7 +62,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         className={`  uppercase archivo tracking-wider  rounded-md  
-            bg-green-600 hover:bg-green-600 px-4 py-2 text-center text-white hover:border-green-400
+            bg-[#00e13c] hover:bg-green-600 px-4 py-2 text-center text-white hover:border-green-400
                             `}
                     >
                        Claim Your Spot
@@ -72,7 +72,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
             </nav>
 
             <motion.section
-                className="relative overflow-hidden px-4 sm:px-6 lg:px-10 py-20 mx-auto  inter"
+                className="relative overflow-hidden px-4 sm:px-6 lg:px-10 py-10 md:py-20 mx-auto  inter"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
