@@ -26,7 +26,7 @@ const GuideSection: React.FC<GuideSectionProps> = ({ theme }) => {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: [0.25, 0.1, 0.25, 1],
+        ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number],
       },
     },
   }
@@ -49,7 +49,7 @@ const GuideSection: React.FC<GuideSectionProps> = ({ theme }) => {
       x: 0,
       transition: {
         duration: 0.5,
-        ease: [0.25, 0.1, 0.25, 1],
+        ease: [0.25, 0.1, 0.25, 1]  as [number, number, number, number],
       },
     },
   }
@@ -64,18 +64,17 @@ const GuideSection: React.FC<GuideSectionProps> = ({ theme }) => {
       animate="visible"
     >
       <motion.h2
-        className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl inter font-bold uppercase tracking-wider   pb-10 md:pb-20 "
+        className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl uppercase tracking-wider doner font-black     pb-10 md:pb-20 "
         variants={itemVariants}
       >
         <strong className="text-[#FFD700] font-black"> 10X </strong>
         GROWTH CLUB
       </motion.h2>
       <motion.p
-        className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl  tracking-wider opacity-90 doner leading-relaxed   uppercase doner  font-black mb-4 lg:mb-6 text-left"
+        className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl  tracking-wider opacity-90 doner leading-relaxed   uppercase   font-black mb-4 lg:mb-6 text-left"
         variants={itemVariants}
       >
-        A proven system to not just get more views — but turn them into predictable monthly income… in just 2 hours a
-        week.
+A proven system to grow on Instagram and YouTube — and turn views into paid clients… by creating videos in just 2 hours a week.
       </motion.p>
 
     
@@ -90,8 +89,8 @@ const GuideSection: React.FC<GuideSectionProps> = ({ theme }) => {
             className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl doner  tracking-wider font-black mb-6 lg:mb-8 text-left"
             variants={itemVariants}
           >
-            Most creators and entrepreneurs don't fail because of effort.
-            </motion.h3>
+Most creators and entrepreneurs don&apos;t fail because of effort.
+</motion.h3>
 
           
           
@@ -100,7 +99,7 @@ const GuideSection: React.FC<GuideSectionProps> = ({ theme }) => {
             className="text-sm sm:text-base md:text-lg lg:text-xl inter font-semibold opacity-90 leading-relaxed text-left mb-6"
             variants={itemVariants}
           >
-            They fail because they're guessing.
+            They fail because they&apos;re guessing.
           </motion.p>
 
           <motion.ul className="space-y-3 lg:space-y-4 text-left inter text-sm md:text-lg opacity-90 leading-relaxed" variants={listVariants}>
@@ -141,51 +140,52 @@ const GuideSection: React.FC<GuideSectionProps> = ({ theme }) => {
             className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl doner  tracking-wider font-black mb-6 lg:mb-8 text-left"
             variants={itemVariants}
           >
-            You'll learn a step-by-step system to:
+            You&apos;ll learn a step-by-step system to:
           </motion.h3>
 
-          <motion.ul className="space-y-4 lg:space-y-5 text-left inter  text-sm md:text-lg opacity-90 leading-relaxed " variants={listVariants}>
-            <motion.li
-              className="flex items-start gap-3"
-              variants={listItemVariants}
-            >
-              <span className="text-[#FFD700] ">👉</span>
-              Build & grow your YouTube channel and Instagram with clarity and confidence
+          <motion.ul
+            className="space-y-3 sm:space-y-4 md:space-y-5 text-left text-sm md:text-lg inter opacity-90 leading-relaxed"
+            variants={listVariants}
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            <motion.li className="flex items-start gap-2 sm:gap-3" variants={listItemVariants}>
+              <span className="text-[#FFD700] text-sm sm:text-base flex-shrink-0 mt-0.5">👉</span>
+              <span>
+                Build and grow your <strong>YouTube channel & Instagram</strong> with clarity and confidence
+              </span>
             </motion.li>
-            <motion.li
-              className=" flex items-start gap-3"
-              variants={listItemVariants}
-            >
-              <span className="text-[#FFD700] ">👉</span>
-              Make videos people love to watch and get more views every time
+            <motion.li className="flex items-start gap-2 sm:gap-3" variants={listItemVariants}>
+              <span className="text-[#FFD700] text-sm sm:text-base flex-shrink-0 mt-0.5">👉</span>
+              <span>
+                Create videos people love to watch — and <strong>get more views, consistently</strong>
+              </span>
             </motion.li>
-            <motion.li
-              className=" flex items-start gap-3"
-              variants={listItemVariants}
-            >
-              <span className="text-[#FFD700] ">👉</span>
-              Build content in just 2 hours per week
+            <motion.li className="flex items-start gap-2 sm:gap-3" variants={listItemVariants}>
+              <span className="text-[#FFD700] text-sm sm:text-base flex-shrink-0 mt-0.5">👉</span>
+              <span>Build content for youtube & instagram in just 2 hours per week</span>
             </motion.li>
-            <motion.li
-              className=" flex items-start gap-3"
-              variants={listItemVariants}
-            >
-              <span className="text-[#FFD700] ">👉</span>
-              Craft irresistible offers your audience wants to buy
+            <motion.li className="flex items-start gap-2 sm:gap-3" variants={listItemVariants}>
+              <span className="text-[#FFD700] text-sm sm:text-base flex-shrink-0 mt-0.5">👉</span>
+              <span>Write hooks and scripts like an expert — even if you&apos;re not a writer</span>
             </motion.li>
-            <motion.li
-              className="flex items-start gap-3"
-              variants={listItemVariants}
-            >
-              <span className="text-[#FFD700] ">👉</span>
-              Price & package your services/products for predictable monthly income
+            <motion.li className="flex items-start gap-2 sm:gap-3" variants={listItemVariants}>
+              <span className="text-[#FFD700] text-sm sm:text-base flex-shrink-0 mt-0.5">👉</span>
+              <span>
+                <strong>Craft irresistible offers</strong> your audience actually wants to buy
+              </span>
             </motion.li>
-            <motion.li
-              className="flex items-start gap-3"
-              variants={listItemVariants}
-            >
-              <span className="text-[#FFD700] ">👉</span>
-              Build a sales funnel that turns views into customers
+            <motion.li className="flex items-start gap-2 sm:gap-3" variants={listItemVariants}>
+              <span className="text-[#FFD700] text-sm sm:text-base flex-shrink-0 mt-0.5">👉</span>
+              <span>
+                Price and package your services for <strong>predictable monthly income</strong>
+              </span>
+            </motion.li>
+            <motion.li className="flex items-start gap-2 sm:gap-3" variants={listItemVariants}>
+              <span className="text-[#FFD700] text-sm sm:text-base flex-shrink-0 mt-0.5">👉</span>
+              <span>
+                Build a simple sales funnel that <strong>turns views into paying clients</strong>
+              </span>
             </motion.li>
           </motion.ul>
 
@@ -203,13 +203,13 @@ const GuideSection: React.FC<GuideSectionProps> = ({ theme }) => {
               className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-4 text-green-600 inter"
               variants={itemVariants}
             >
-              This isn't just about content.
+              This isn&apos;t just about content.
             </motion.h4>
             <motion.p
               className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold opacity-90 inter"
               variants={itemVariants}
             >
-              It's about building a real business powered by content.
+              It&apos;s about building a <strong>real business </strong>powered by content.
             </motion.p>
           </motion.div>
         </motion.div>
