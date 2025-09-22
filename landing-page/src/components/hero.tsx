@@ -23,11 +23,11 @@ const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
             className={`transition-colors duration-500 ${theme === "black" ? "bg-black text-white" : "bg-[#f8f1f3] text-black"
                 }`}
         >
-            <nav className="flex items-center justify-between px-4 sm:px-6 lg:px-10 py-6 lg:py-10 mx-auto inter ">
+            <nav className="flex items-center justify-between px-4 sm:px-6 lg:px-10 py-6   mx-auto inter ">
                 {/* Logo */}
                 <div className="relative flex items-center">
                     <img src={theme === "black" ? "/logo1.svg" : "/logo7.png"}
-                        alt="10xGrowth Logo" className="h-20 w-20 bg-[#f8f1f3]" />
+                        alt="10xGrowth Logo" className="h-20 w-20 sm:h-40 sm:w-40 bg-[#f8f1f3]" />
                     {/* <motion.a
     href="https://www.10xgrowth.club/"
     className="relative z-10 flex items-center gap-2 text-xl sm:text-2xl md:text-3xl font-bold uppercase  tracking-wider hover:text-green-600 transition"
@@ -61,18 +61,18 @@ const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
                     <motion.div
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className={`  uppercase archivo tracking-wider  rounded-md  
+                        className={`  uppercase archivo tracking-wider  
             bg-[#00e13c] hover:bg-green-600 px-4 py-2 text-center text-white hover:border-green-400
                             `}
                     >
-                       Claim Your Spot
+                        Claim Your Spot
 
                     </motion.div>
                 </motion.div>
             </nav>
 
             <motion.section
-                className="relative overflow-hidden px-4 sm:px-6 lg:px-10 py-10 md:py-20 mx-auto  inter"
+                className="relative overflow-hidden px-4 sm:px-6 lg:px-10 py-10 md:py-20 mx-auto   inter"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -146,8 +146,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
                         whileTap={{ scale: 0.95 }}
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        // transition={{ duration: 0.6, delay: 1.2 }}
-                      
+                    // transition={{ duration: 0.6, delay: 1.2 }}
+
                     >
                         <PulsatingButton theme={theme} className="uppercase ">Join Before It&apos;s Gone</PulsatingButton>
 

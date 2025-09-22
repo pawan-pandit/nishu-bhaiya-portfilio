@@ -40,6 +40,12 @@ const AboutSection: React.FC<AboutSectionProps> = ({ theme }) => {
             >
                 About me
             </motion.h2>
+            <motion.p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl  tracking-wider opacity-90 doner leading-relaxed   uppercase   font-black mb-4 lg:mb-6 text-left"
+                        variants={itemVariants}>
+                        I help creators, coaches, and entrepreneurs grow their personal brand
+                        on <strong className="text-green-600">YouTube & Instagram</strong>, craft offers that make money,
+                        and build funnels that bring in clients on repeat.
+                    </motion.p>
             <div className=" mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
                 {/* Left Side Image */}
@@ -58,12 +64,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ theme }) => {
                 >
 
 
-                    <motion.p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl  tracking-wider opacity-90 doner leading-relaxed   uppercase   font-black mb-4 lg:mb-6 text-left"
-                        variants={itemVariants}>
-                        I help creators, coaches, and entrepreneurs grow their personal brand
-                        on <strong className="text-green-600">YouTube & Instagram</strong>, craft offers that make money,
-                        and build funnels that bring in clients on repeat.
-                    </motion.p>
+                  
 
                     <motion.h3
                         className="text-sm sm:text-base md:text-lg lg:text-xl inter font-semibold opacity-90 leading-relaxed text-left mb-6"
@@ -124,7 +125,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ theme }) => {
                     <div className="bg-[#0000000d] p-4 sm:p-6 md:p-8 lg:p-10 rounded-lg shadow-md">
                         <motion.h3 className="text-sm sm:text-base md:text-lg lg:text-xl inter font-semibold opacity-90 leading-relaxed text-left mb-6"
                             variants={itemVariants}>
-                            👉 Everything I&apos;ve learned, tested, failed at, and mastered has been
+                            👉🏽Everything I&apos;ve learned, tested, failed at, and mastered has been
                             distilled into <strong>one proven growth system </strong>that I’ll build with you.
                         </motion.h3>
 
@@ -136,7 +137,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ theme }) => {
                         </motion.h3>
 
                         <motion.ul
-                            className="space-y-3 list-disc pl-5 text-xs sm:text-sm inter"
+                            className="space-y-3 list-disc pl-5 text-sm sm:text-base inter"
                             variants={containerVariants}
                         >
                             <motion.li variants={itemVariants}>

@@ -2,6 +2,7 @@
 
 import type React from "react"
 import { motion } from "framer-motion"
+import { ArrowRightCircle } from "lucide-react"
 
 interface GuideSectionProps {
   theme: "black" | "white"
@@ -82,7 +83,10 @@ const GuideSection: React.FC<GuideSectionProps> = ({ theme }) => {
       <div className="w-full  grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16">
         {/* Left Column - Problem Section */}
 
-        <motion.div className="space-y-6 lg:space-y-8" variants={itemVariants}>
+        <motion.div
+  className="flex flex-col justify-center items-start text-left space-y-6  h-full"
+  variants={itemVariants}
+>
           <motion.h3
             className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl doner  tracking-wider font-black mb-6 lg:mb-8 text-left"
             variants={itemVariants}
@@ -105,15 +109,15 @@ const GuideSection: React.FC<GuideSectionProps> = ({ theme }) => {
             viewport={{ once: true, amount: 0.3 }}
           >
             <motion.li className=" flex items-start gap-3 " variants={listItemVariants}>
-              <span className="text-[#FFD700] ">👉</span>
+            <span className="text-[#00e13c] text-sm sm:text-base flex-shrink-0 mt-0.5"><ArrowRightCircle/></span>
               Guessing what niche their personal brand should stand for.
             </motion.li>
             <motion.li className=" flex items-start gap-3" variants={listItemVariants}>
-              <span className="text-[#FFD700] ">👉</span>
+            <span className="text-[#00e13c] text-sm sm:text-base flex-shrink-0 mt-0.5"><ArrowRightCircle/></span>
               Guessing what topics will actually attract the right audience.
             </motion.li>
             <motion.li className=" flex items-start gap-3" variants={listItemVariants}>
-              <span className="text-[#FFD700] ">👉</span>
+            <span className="text-[#00e13c] text-sm sm:text-base flex-shrink-0 mt-0.5"><ArrowRightCircle/></span>
               Guessing how to turn that audience into customers and real business revenue.
             </motion.li>
           </motion.ul>
@@ -127,9 +131,7 @@ const GuideSection: React.FC<GuideSectionProps> = ({ theme }) => {
         </motion.div>
 
         <motion.div
-          className={`space-y-6 lg:space-y-8 bg-white p-6 rounded-lg ${
-            theme === "black" ? "bg-black text-white" : "bg-[#f8f1f3] text-black"
-          } `}
+          className={`space-y-6 lg:space-y-8 bg-white p-6 rounded-lg`}
           variants={itemVariants}
         >
           <motion.h3
@@ -147,40 +149,40 @@ const GuideSection: React.FC<GuideSectionProps> = ({ theme }) => {
             viewport={{ once: true, amount: 0.3 }}
           >
             <motion.li className="flex items-start gap-2 sm:gap-3" variants={listItemVariants}>
-              <span className="text-[#FFD700] text-sm sm:text-base flex-shrink-0 mt-0.5">👉</span>
+            <span className="text-[#00e13c] text-sm sm:text-base flex-shrink-0 mt-0.5"><ArrowRightCircle/></span>
               <span>
                 Build and grow your <strong>YouTube channel & Instagram</strong> with clarity and confidence
               </span>
             </motion.li>
             <motion.li className="flex items-start gap-2 sm:gap-3" variants={listItemVariants}>
-              <span className="text-[#FFD700] text-sm sm:text-base flex-shrink-0 mt-0.5">👉</span>
+            <span className="text-[#00e13c] text-sm sm:text-base flex-shrink-0 mt-0.5"><ArrowRightCircle/></span>
               <span>
                 Create videos people love to watch — and <strong>get more views, consistently</strong>
               </span>
             </motion.li>
             <motion.li className="flex items-start gap-2 sm:gap-3" variants={listItemVariants}>
-              <span className="text-[#FFD700] text-sm sm:text-base flex-shrink-0 mt-0.5">👉</span>
+            <span className="text-[#00e13c] text-sm sm:text-base flex-shrink-0 mt-0.5"><ArrowRightCircle/></span>
               <span>Build content for youtube & instagram in just <strong>2 hours per week</strong></span>
             </motion.li>
             <motion.li className="flex items-start gap-2 sm:gap-3" variants={listItemVariants}>
-              <span className="text-[#FFD700] text-sm sm:text-base flex-shrink-0 mt-0.5">👉</span>
+            <span className="text-[#00e13c] text-sm sm:text-base flex-shrink-0 mt-0.5"><ArrowRightCircle/></span>
               <span>Write <strong>hooks and scripts </strong>like an expert — even if you&apos;re not a writer</span>
             </motion.li>
             <motion.li className="flex items-start gap-2 sm:gap-3" variants={listItemVariants}>
-              <span className="text-[#FFD700] text-sm sm:text-base flex-shrink-0 mt-0.5">👉</span>
+            <span className="text-[#00e13c] text-sm sm:text-base flex-shrink-0 mt-0.5"><ArrowRightCircle/></span>
               <span>
                 <strong>Craft irresistible offers</strong> your audience actually wants to buy
               </span>
             </motion.li>
             <motion.li className="flex items-start gap-2 sm:gap-3" variants={listItemVariants}>
-              <span className="text-[#FFD700] text-sm sm:text-base flex-shrink-0 mt-0.5">👉</span>
+            <span className="text-[#00e13c] text-sm sm:text-base flex-shrink-0 mt-0.5"><ArrowRightCircle/></span>
               <span>
                 Price and package your services for <strong>predictable monthly income</strong>
               </span>
             </motion.li>
             <motion.li className="flex items-start gap-2 sm:gap-3" variants={listItemVariants}>
-              <span className="text-[#FFD700] text-sm sm:text-base flex-shrink-0 mt-0.5">👉</span>
-              <span>
+            <span className="text-[#00e13c] text-sm sm:text-base flex-shrink-0 mt-0.5"><ArrowRightCircle/></span>
+            <span>
                 Build a simple sales funnel that <strong>turns views into paying clients</strong>
               </span>
             </motion.li>

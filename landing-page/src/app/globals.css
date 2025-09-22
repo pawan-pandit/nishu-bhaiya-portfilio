@@ -9,7 +9,7 @@
       box-shadow: 0 0 0 0 var(--pulse-color);
     }
     50% {
-      box-shadow: 0 0 0 8px var(--pulse-color);
+      box-shadow: 0 0 0 4px var(--pulse-color);
     }
   }
 }
