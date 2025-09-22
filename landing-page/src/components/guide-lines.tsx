@@ -56,7 +56,7 @@ const GuideSection: React.FC<GuideSectionProps> = ({ theme }) => {
 
   return (
     <motion.div
-      className={`transition-colors duration-500 flex flex-col items-center justify-center text-center mx-auto px-4 sm:px-6 lg:px-8 xl:px-12  w-full ${
+      className={`transition-colors duration-500 flex flex-col items-left justify-center text-left mx-auto px-4 sm:px-6 lg:px-8 xl:px-12  w-full ${
         theme === "black" ? "bg-black text-white" : "bg-[#f8f1f3] text-black"
       }`}
       variants={containerVariants}
@@ -65,7 +65,7 @@ const GuideSection: React.FC<GuideSectionProps> = ({ theme }) => {
       viewport={{ once: true, amount: 0.2 }}
     >
       <motion.h2
-        className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl uppercase tracking-wider doner font-black     pb-10 md:pb-20 "
+        className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl uppercase tracking-wider doner font-black     pb-10  "
         variants={itemVariants}
       >
         <strong className="text-[#FFD700] font-black"> 10X </strong>
