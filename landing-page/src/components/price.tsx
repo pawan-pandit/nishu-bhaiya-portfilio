@@ -72,8 +72,10 @@ export default function PriceSection() {
               <motion.span whileHover={{ scale: 1.2, rotate: 10 }} className=" bg-green-400 px-2">
                 <div className="text-black text-xl"><MoveRight/></div>
               </motion.span>
-              <p className=" inter text-sm sm:text-base md:text-lg lg:text-xl 
-                            leading-relaxed">{feature}</p>
+              <p     className={`
+                            inter text-sm sm:text-base md:text-lg 
+                            leading-relaxed text-gray-700
+                        `}>{feature}</p>
             </motion.div>
           ))}
         </div>
@@ -87,7 +89,7 @@ export default function PriceSection() {
                transform hover:scale-110 
                hover:backdrop-blur-md hover:bg-green-500"
         >
-          <p className=" text-2xl sm:text-2xl md:text-3xl lg:text-4xl  font-extrabold mb-2">$250</p>
+          <p className=" text-2xl sm:text-2xl md:text-3xl  font-extrabold mb-2">$250</p>
           <p className="text-lg font-medium tracking-wide">per month</p>
         </motion.div>
         <div className="w-full  mt-4">
