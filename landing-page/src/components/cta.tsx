@@ -80,7 +80,7 @@ export default function CTASection({ theme = "white" }: CTASectionProps) {
 
 
 
-                    <p className={`text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl tracking-wider opacity-90 doner font-semibold ${isWhiteTheme ? "text-rose-600" : "text-rose-400"}`}>
+                    <p className={`text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl tracking-wider opacity-90 doner font-semibold ${isWhiteTheme ? "text-green-600" : "text-green-400"}`}>
                         You need a system that grows and monetizes.
                     </p>
                 </motion.div>

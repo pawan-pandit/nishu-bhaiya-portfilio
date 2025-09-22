@@ -12,6 +12,8 @@ import IncludeSection from "@/components/includes"
 import ProgramSection from "@/components/program"
 import EndResultSection from "@/components/endResult"
 import CTASection from "@/components/cta"
+import FAQSection from "@/components/question"
+import PriceSection from "@/components/price"
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true)
@@ -197,6 +199,13 @@ export default function Home() {
             >
               <ProgramSection theme={theme} />
             </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <PriceSection  />
+            </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -204,6 +213,15 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <EndResultSection theme={theme} />
+
+
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <FAQSection theme={theme} />
 
 
             </motion.div>
