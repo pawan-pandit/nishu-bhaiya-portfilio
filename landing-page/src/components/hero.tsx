@@ -22,8 +22,30 @@ const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
         <header
             className={`transition-colors duration-500 ${theme === "black" ? "bg-black text-white" : "bg-[#f8f1f3] text-black"
                 }`}
-        >
-            <nav className="flex items-center justify-between px-4 sm:px-6 lg:px-10 py-6   mx-auto inter ">
+        > 
+    <div className="w-full bg-indigo-950 overflow-hidden">
+  <div className=" mx-auto flex flex-col sm:flex-row items-center justify-center px-4 sm:px-6 py-3 sm:py-4">
+    
+    {/* Left: Icon + Message */}
+    <div className="flex items-center gap-3 sm:gap-4 text-center sm:text-left">
+      <Image 
+        src="/money.webp" 
+        alt="Money back guarantee" 
+        width={48} 
+        height={48} 
+        className="w-16 md:w-20 h-auto"
+      />
+      <p className="archivo tracking-wide text-xs sm:text-sm  text-white leading-relaxed">
+        I am so confident in what I teach that if you don&apos;t get clarity after our first 1:1 strategy call, 
+        I&apos;ll refund you every penny... It&apos;s that simple.
+      </p>
+    </div>
+
+
+  </div>
+</div>
+
+            <nav className="flex items-center justify-between px-4 sm:px-6 lg:px-10   mx-auto inter ">
                 {/* Logo */}
                 <div className="relative flex items-center">
                     <img src={theme === "black" ? "/logo1.svg" : "/logo7.png"}
