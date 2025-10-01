@@ -1,0 +1,285 @@
+@import "tailwindcss";
+
+@theme inline {
+  --animate-pulse: pulse var(--duration) ease-out infinite;
+
+  @keyframes pulse {
+    0%,
+    100% {
+      box-shadow: 0 0 0 0 var(--pulse-color);
+    }
+    50% {
+      box-shadow: 0 0 0 4px var(--pulse-color);
+    }
+  }
+}
+
+@font-face {
+  font-family: 'plus';
+  src: url('/fonts/plus.ttf') format('truetype');
+
+}
+.plus {
+  font-family: 'plus', cursive;
+}
+
+
+@font-face {
+  font-family: 'honk';
+  src: url('/fonts/Honk-Regular-VariableFont_MORF,SHLN.ttf') format('truetype');
+
+}
+.honk {
+  font-family: 'honk', cursive;
+}
+
+@font-face {
+  font-family: 'anton';
+  src: url('/fonts/Anton-Regular.ttf') format('truetype');
+
+}
+.anton {
+  font-family: 'anton', cursive;
+}
+
+
+@font-face {
+  font-family: 'roboto';
+  src: url('/fonts/RobotoMono-VariableFont_wght.ttf') format('truetype');
+
+}
+.roboto {
+  font-family: 'roboto', cursive;
+}
+
+@font-face {
+  font-family: 'archivo';
+  src: url('/fonts/ArchivoBlack-Regular.ttf') format('truetype');
+
+}
+.archivo {
+  font-family: 'archivo', cursive;
+}
+
+
+@font-face {
+  font-family: 'doner';
+  src: url('/fonts/Doner-RegularDisplay.otf') format('truetype');
+
+}
+.doner {
+  font-family: 'doner', cursive;
+}
+
+
+@font-face {
+  font-family: 'inter';
+  src: url('/fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+
+}
+.inter {
+  font-family: 'inter', cursive;
+}
+
+
+
+
+
+
+
+
+
+
+
+.cardContainer {
+   
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 13%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: -25%;
+  height: 500px;
+  /* width: 90%; */
+  border-radius: 10px;
+  padding: 50px;
+  transform-origin: top;
+}
+
+.card h2 {
+  text-align: start;
+  margin: 0 0 10px;
+  font-size: 28px;
+}
+
+.body {
+  display: flex;
+  height: 100%;
+  gap: 50px;
+}
+
+.description {
+  width: 40%;
+  position: relative;
+}
+
+.description p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.description span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  position: absolute;
+  bottom: 0;
+}
+
+.imageContainer {
+  position: relative;
+  width: 60%;
+  height: 100%;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.inner {
+  width: 100%;
+  height: 100%;
+}
+
+/* Responsive styles for mobile screens */
+@media (max-width: 768px) {
+  .card {
+    height: auto;
+    width: 100%;
+    padding: 30px;
+    margin-top: 20px;
+    top: 0;
+  }
+
+  .card h2 {
+    font-size: 24px;
+  }
+
+  .body {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .description {
+    width: 100%;
+  }
+
+  .description p {
+    font-size: 14px;
+  }
+
+  .description span {
+    position: relative;
+    margin-top: 20px;
+  }
+
+  .imageContainer {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+/* Additional adjustments for very small screens */
+@media (max-width: 480px) {
+  .card {
+    padding: 20px;
+  }
+
+  .card h2 {
+    font-size: 20px;
+  }
+
+  .description p {
+    font-size: 12px;
+  }
+
+  .imageContainer {
+    height: 150px;
+  }
+}
+
+
+
+/* .cardContainer{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0px;
+  .card{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: -25%;
+    height: 500px;
+    width: 1000px;
+    border-radius: 25px;
+    padding:50px;
+    transform-origin: top;
+    h2{
+      text-align: center;
+      margin: 0px;
+      font-size: 28px;
+    }
+    .body{
+      display: flex;
+      height: 100%;
+      margin-top: 50px;
+      gap: 50px;
+
+      .description{
+        width: 40%;
+        position: relative;
+        top: 10%;
+        p{
+          font-size: 16px;
+          &::first-letter{
+            font-size: 28px;
+            font-family: 'Title';
+          }
+        }
+        span{
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          a{
+            font-size: 12px;
+            text-decoration: underline;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .imageContainer{
+        position: relative;
+        width: 60%;
+        height: 100%;
+        border-radius: 25px;
+        overflow: hidden;
+        .inner{
+          width: 100%;
+          height: 100%;
+        }
+        img{
+          object-fit: cover;
+        }
+      }
+    }
+  }
+} */
