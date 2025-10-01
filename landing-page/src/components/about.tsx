@@ -44,7 +44,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ theme }) => {
                         variants={itemVariants}>
                         I help creators, coaches, and entrepreneurs grow their personal brand
                         on <strong className="text-green-600 inter">YouTube </strong> <strong className="text-green-600 inter"> &</strong> <strong className=" inter text-green-600"> Instagram</strong>, craft offers that make money,
-                        and build funnels that bring in clients on repeat.
+and build funnels that bring in clients on repeat.
                     </motion.p>
             <div className=" mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 

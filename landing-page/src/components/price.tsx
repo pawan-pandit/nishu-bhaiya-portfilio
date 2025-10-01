@@ -88,7 +88,7 @@ export default function PriceSection() {
                 <p className="inter text-sm md:text-lg leading-relaxed text-gray-700">{feature}</p>
               </motion.div>
             ))}
-                            <p className="inter text-sm md:text-lg leading-relaxed text-gray-700 italic ">  👉 Total value: $6,600+</p>
+                            <p className="inter text-sm md:text-lg leading-relaxed text-gray-700 italic">  👉 Total value: $6,600+</p>
 
           
           </div>
@@ -206,6 +206,8 @@ export default function PriceSection() {
   
   
     </div>
-  </div></>
+  </div>
+  
+  </>
   )
 }

@@ -62,6 +62,7 @@ export default function CTASection({ theme = "white" }: CTASectionProps) {
         >
             <div className=" mx-auto text-center">
                 {/* Header */}
+
                 {/* <motion.div variants={itemVariants} className="mb-12">
 
                     <motion.h2
@@ -83,10 +84,12 @@ export default function CTASection({ theme = "white" }: CTASectionProps) {
                     <p className={`text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl tracking-wider opacity-90 doner font-semibold ${isWhiteTheme ? "text-green-600" : "text-green-400"}`}>
                         You need a system that grows and monetizes.
                     </p>
+<<<<<<< HEAD
                 </motion.div> */}
 
                 {/* Features Grid */}
                 {/* <motion.div variants={itemVariants} className="grid grid-cols-1 md:grid-cols-3 gap-4  mb-16">
+
                     {features.map((feature, index) => (
                         <motion.div
                             key={index}
@@ -104,6 +107,7 @@ export default function CTASection({ theme = "white" }: CTASectionProps) {
                         </motion.div>
                     ))}
                 </motion.div> */}
+
 
 
 
@@ -161,6 +165,7 @@ export default function CTASection({ theme = "white" }: CTASectionProps) {
     Questions? Email us at{" "}
     <a href="mailto:vivek@10xgrowth.club" className="underline text-green-600 hover:text-blue-600">
     vivek@10xgrowth.club
+
     </a>
   </p>
 </div>

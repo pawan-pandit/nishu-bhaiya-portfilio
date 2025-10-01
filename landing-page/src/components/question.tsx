@@ -40,6 +40,7 @@ import { useState } from "react"
     },
   ]
 
+
 interface FAQSectionProps {
   theme?: "white" | "black"
 }
@@ -143,6 +144,7 @@ export default function FAQSection({ theme = "white" }: FAQSectionProps) {
 >
   {faq.a}
 </p>
+
 
                 </div>
               </motion.div>

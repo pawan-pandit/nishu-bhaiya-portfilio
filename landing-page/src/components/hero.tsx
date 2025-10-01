@@ -24,6 +24,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
                 }`}
         > 
     <div className="w-full bg-indigo-950 overflow-hidden">
+
   <div className=" mx-auto flex flex-col sm:flex-row items-center justify-center px-2 sm:px-6 py-3 sm:py-4">
     
     {/* Left: Icon + Message */}
@@ -34,6 +35,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
         width={48} 
         height={48} 
         className="w-20 h-auto text-white"
+
       />
       <p className="archivo tracking-wide text-xs sm:text-sm  text-white leading-relaxed">
         I am so confident in what I teach that if you don&apos;t get clarity after our first 1:1 strategy call, 

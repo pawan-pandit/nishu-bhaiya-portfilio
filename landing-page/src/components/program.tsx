@@ -9,6 +9,8 @@ const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
         opacity: 1,
+
+
     },
 };
 
@@ -38,6 +40,7 @@ const ProgramSection: React.FC<ProgramSectionProps> = ({ theme }) => {
                 "Channel Positioning + Niche Clarity"
             ],
             outcome: "Clarity on your niche, audience, and brand.You’ll learn how to create 1 YouTube video and 4 Instagram videos in just 2 hours per week—and repurpose that content into multiple posts plus an email, so you can stay consistent without the overwhelm.",
+
             color: "#BBACAF",
         },
         {
@@ -48,11 +51,14 @@ const ProgramSection: React.FC<ProgramSectionProps> = ({ theme }) => {
                 "This is where growth happens. You'll master the two biggest levers that decide your reach.",
             point: [
                 "Proven Rules for Thumbnails That Get Clicked",
+
                 "AI Thumbnails Made Simple",
                 "How to Create Hooks People Can't Ignore",
                 "The Script Analysis Method for Maximum Views",
                 "Winning Script Frameworks Built to Hook & Hold Attention",
+
                 "How to write script & Story Formulas That Always Work Online"
+
             ],
             outcome: "Learn to make thumbnails that grab attention and write hooks, scripts and stories that keep people watching.",
             color: "#BBACAF",
@@ -85,6 +91,7 @@ const ProgramSection: React.FC<ProgramSectionProps> = ({ theme }) => {
                 "Market Research: Discover What People Actually Want to Buy",
             ],
             outcome: "Clear offer + pricing strategy for both low-ticket and high-ticket programs—designed to match your audience and turn viewers into loyal, paying customers.",
+
             color: "#BBACAF",
         },
         {
@@ -109,6 +116,7 @@ const ProgramSection: React.FC<ProgramSectionProps> = ({ theme }) => {
     return (
         <motion.section
             className={`transition-colors duration-500 px-4 sm:px-6 lg:px-8 text-black xl:px-12 py-10 md:py-20 w-full ${theme === "black" ? "bg-black text-white" : "bg-[#f8f1f3] text-black"}`}
+
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}

@@ -40,6 +40,7 @@ const IncludeSection: React.FC<IncludeSectionProps> = ({ theme }) => {
         {
             title: "Private Expert Community",
             description: "Join a private space where  creators and entrepreneurs connect to exchange strategies, share wins, and support each other’s journey, all with the shared goal of scaling to $30K–$100K/month.",
+
         },
         {
             title: "Direct Support & Feedback from Vivek",
@@ -53,6 +54,7 @@ const IncludeSection: React.FC<IncludeSectionProps> = ({ theme }) => {
             title: "Weekly Training Calls",
             description: "Level up every week with live training sessions built to help creators and entrepreneurs grow their personal brand and scale their business to $30K–$100K/month. Learn proven strategies, master high-impact skills, and plug into ready-to-use templates. Get answers to your questions, personalized feedback, and behind-the-scenes insights to accelerate your growth.",
         },
+
     ];
 
     return (
