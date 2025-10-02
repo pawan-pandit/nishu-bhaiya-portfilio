@@ -75,7 +75,10 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
+                <section id="about">
+
               <AboutSection theme={theme} />
+              </section>
             </motion.div>
 
 
@@ -84,7 +87,10 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
+                <section id="included">
+
               <IncludeSection theme={theme} />
+              </section>
             
             </motion.div>
             <motion.div
@@ -92,14 +98,18 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
+              <section id="details">
               <ProgramSection theme={theme} />
+              </section>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
+              <section id="pricing">
               <PriceSection  />
+              </section>
             </motion.div>
 
             <motion.div
