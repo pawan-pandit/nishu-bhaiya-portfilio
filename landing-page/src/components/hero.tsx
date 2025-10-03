@@ -158,7 +158,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
             >
                 <div className="relative z-10 ">
                     <motion.h2
-                        className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl uppercase tracking-wider doner font-black mb-2  md:mb-6"
+                        className="text-2xl md:text-5xl lg:text-6xl xl:text-7xl uppercase tracking-wider doner font-black mb-2  md:mb-6"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.6 }}
