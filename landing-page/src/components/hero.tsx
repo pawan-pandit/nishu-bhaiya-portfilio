@@ -47,9 +47,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
           <Image
             src="/money.svg"
             alt="100% Money Back Guarantee"
-            width={100}
-            height={100}
-            className="w-[100px] h-[100px] sm:w-[70px] sm:h-[70px] md:w-[90px] md:h-[90px] lg:w-[100px] lg:h-[100px] cover drop-shadow-lg"
+            width={10}
+            height={10}
+            className="w-[100px] h-[100px] sm:w-[70px] sm:h-[70px] md:w-[90px] md:h-[90px] lg:w-[100px] lg:h-[100px]  drop-shadow-lg"
             priority
           />
         </div>
@@ -81,7 +81,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
             <button
               key={item.href}
               onClick={() => scrollToSection(item.href)}
-              className="text-sm xl:text-base hover:text-green-500 transition-colors duration-200 hover:underline"
+              className="text-sm xl:text-base hover:text-green-500  font-semibold transition-colors duration-200 hover:underline"
             >
               {item.label}
             </button>
