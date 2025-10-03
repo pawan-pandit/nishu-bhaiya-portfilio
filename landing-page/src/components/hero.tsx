@@ -158,7 +158,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
             >
                 <div className="relative z-10 ">
                     <motion.h2
-                        className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl uppercase tracking-wider doner font-black  mb-6"
+                        className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl uppercase tracking-wider doner font-black mb-2  md:mb-6"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.6 }}
@@ -167,8 +167,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
                         Build Better Offer<br /> Turn Content Into <strong className="text-green-600 font-black"> Clients</strong>
                     </motion.h2>
 
-                    <div className="relative mx-auto mt-8">
-                        <div className="relative z-10   space-y-6">
+                    <div className="relative mx-auto md:mt-8">
+                        <div className="relative z-10 space-y-2   md:space-y-6">
                             <BoxReveal
                                 boxColor={theme === "black" ? "#10b981" : "#059669"}
                                 duration={0.6}
