@@ -97,13 +97,12 @@ export default function PriceSection() {
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 1, type: "spring", stiffness: 200 }}
-            className="block archivo tracking-wider bg-[#00e13c] w-full text-center px-6 py-3 rounded-md border border-green-600 text-white font-medium uppercase 
+            className="block  tracking-wider bg-[#00e13c] w-full text-center px-6 py-3 rounded-md border border-green-600 text-white font-medium uppercase 
               transition-all duration-300 ease-in-out transform hover:scale-110 hover:backdrop-blur-md hover:bg-green-500"
           >
-            <p className="text-2xl md:text-3xl font-extrabold mb-2">
-              <span className="line-through text-gray-200 mr-2">$300</span> $280
+            <p className="text-2xl md:text-3xl  mb-2">
+              <span className="line-through text-gray-200 mr-2 text-lg">$950</span> <span className="archivo" > $280 </span> <span className="text-gray-200 text-lg">/per month</span>
             </p>
-            <p className="text-lg font-medium tracking-wide">per month</p>
           </motion.div>
 
           <div className="w-full mt-4">
@@ -112,7 +111,7 @@ export default function PriceSection() {
               className="block archivo tracking-wider w-full text-center px-6 py-3 rounded-md border border-green-600 text-black font-medium uppercase 
                 transition-all duration-300 ease-in-out transform hover:scale-110 hover:backdrop-blur-md hover:bg-white/10"
             >
-              Apply Now
+              claim your spot
             </Link>
           </div>
           <BorderBeam duration={6} size={400} className="from-transparent via-red-500 to-transparent" />
@@ -164,11 +163,11 @@ export default function PriceSection() {
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 1, type: "spring", stiffness: 200 }}
-            className="block archivo tracking-wider bg-[#00e13c] w-full text-center px-6 py-3 rounded-md border border-green-600 text-white font-medium uppercase 
+            className="block  tracking-wider bg-[#00e13c] w-full text-center px-6 py-3 rounded-md border border-green-600 text-white font-medium uppercase 
               transition-all duration-300 ease-in-out transform hover:scale-110 hover:backdrop-blur-md hover:bg-green-500"
           >
             {/* <p className="text-2xl md:text-3xl font-extrabold mb-2">$3,000</p> */}
-            <p className="text-lg font-medium tracking-wide">one-time setup</p>
+            <p className=" font-medium tracking-wide text-2xl md:text-3xl "> <span className="archivo">$4500</span> <span className="text-gray-200 text-lg">/per month</span></p>
           </motion.div>
 
           <div className="w-full mt-4">
@@ -177,7 +176,7 @@ export default function PriceSection() {
               className="block archivo tracking-wider w-full text-center px-6 py-3 rounded-md border border-green-600 text-black font-medium uppercase 
                 transition-all duration-300 ease-in-out transform hover:scale-110 hover:backdrop-blur-md hover:bg-white/10"
             >
-              Apply Now
+              claim your spot
             </Link>
           </div>
           <BorderBeam duration={6} size={400} className="from-transparent via-yellow-500 to-transparent" />

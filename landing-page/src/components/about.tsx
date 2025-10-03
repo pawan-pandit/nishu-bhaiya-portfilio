@@ -41,11 +41,11 @@ const AboutSection: React.FC<AboutSectionProps> = ({ theme }) => {
                 About me
             </motion.h2>
             <motion.p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl  tracking-wider opacity-90 doner leading-relaxed   uppercase   font-black mb-4 lg:mb-6 text-left"
-                        variants={itemVariants}>
-                        I help creators, coaches, and entrepreneurs grow their personal brand
-                        on <strong className="text-green-600 inter">YouTube </strong> <strong className="text-green-600 inter"> &</strong> <strong className=" inter text-green-600"> Instagram</strong>, craft offers that make money,
-and build funnels that bring in clients on repeat.
-                    </motion.p>
+                variants={itemVariants}>
+                I help creators, coaches, and entrepreneurs grow their personal brand
+                on <strong className="text-green-600 inter">YouTube </strong> <strong className="text-green-600 inter"> &</strong> <strong className=" inter text-green-600"> Instagram</strong>, craft offers that make money,
+                and build funnels that bring in clients on repeat.
+            </motion.p>
             <div className=" mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
                 {/* Left Side Image */}
@@ -64,7 +64,7 @@ and build funnels that bring in clients on repeat.
                 >
 
 
-                  
+
 
                     <motion.h3
                         className="text-sm sm:text-base md:text-lg lg:text-xl inter font-semibold opacity-90 leading-relaxed text-left mb-6"
@@ -118,6 +118,9 @@ and build funnels that bring in clients on repeat.
                             <motion.li variants={itemVariants} className="bg-white rounded-lg p-3  shadow hover:shadow-lg transition-shadow">
                                 Marcus Jones
                             </motion.li>
+                            <motion.li variants={itemVariants} className="bg-white rounded-lg p-3  shadow hover:shadow-lg transition-shadow">
+                                Nolan Molt
+                            </motion.li>
 
                         </motion.ul>
                     </div>
@@ -154,7 +157,7 @@ and build funnels that bring in clients on repeat.
                     </div>
 
                     <motion.p className="inter text:sm sm:text-lg font-bold italic ">
-                        You don’t need another “content hack.”
+                        You don’t need another “content hack”
                         You need someone who’s already walked the path — and can walk it with you.
                         That’s exactly what I do.
 
