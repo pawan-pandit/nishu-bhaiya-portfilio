@@ -40,16 +40,16 @@ const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
             className={`transition-colors duration-500 ${theme === "black" ? "bg-black text-white" : "bg-[#f8f1f3] text-black"
                 }`}
         > 
- <div className="w-full bg-indigo-950 overflow-hidden">
+ <div className="w-full bg-black overflow-hidden">
       <div className="max-w-5xl mx-auto flex items-center justify-between gap-3 sm:gap-4 md:gap-6 px-3 sm:px-4">
         {/* Left: Logo - fully visible at all sizes */}
-        <div className="flex-shrink-0">
+        <div className="flex-shrink-0 bg-black ">
           <Image
             src="/money.svg"
             alt="100% Money Back Guarantee"
             width={10}
             height={10}
-            className="w-[100px] h-[100px] sm:w-[70px] sm:h-[70px] md:w-[90px] md:h-[90px] lg:w-[100px] lg:h-[100px]  drop-shadow-lg"
+            className="w-[100px] h-[100px] sm:w-[70px] sm:h-[70px] md:w-[90px] md:h-[90px] bg-black  lg:w-[100px] lg:h-[100px]  drop-shadow-lg"
             priority
           />
         </div>
