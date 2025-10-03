@@ -41,7 +41,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
                 }`}
         > 
  <div className="w-full bg-indigo-950 overflow-hidden">
-      <div className="max-w-5xl mx-auto flex items-center justify-between gap-3 sm:gap-4 md:gap-6 px-3 sm:px-4 py-2 sm:py-3">
+      <div className="max-w-5xl mx-auto flex items-center justify-between gap-3 sm:gap-4 md:gap-6 px-3 sm:px-4">
         {/* Left: Logo - fully visible at all sizes */}
         <div className="flex-shrink-0">
           <Image
@@ -49,7 +49,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
             alt="100% Money Back Guarantee"
             width={100}
             height={100}
-            className="w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] md:w-[90px] md:h-[90px] lg:w-[100px] lg:h-[100px] drop-shadow-lg"
+            className="w-[100px] h-[100px] sm:w-[70px] sm:h-[70px] md:w-[90px] md:h-[90px] lg:w-[100px] lg:h-[100px] cover drop-shadow-lg"
             priority
           />
         </div>
@@ -57,8 +57,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
         {/* Right: Text - smaller and more readable */}
         <div className="flex-1 min-w-0">
           <p className="font-sans font-semibold text-[10px] sm:text-xs md:text-sm text-white leading-relaxed">
-            I am so <span className="text-yellow-400">confident</span> in what I teach that if you don&apos;t get
-            clarity after our first <span className="text-yellow-300">1:1 strategy call</span>, I&apos;ll{" "}
+            I am so confident in what I teach that if you don&apos;t get
+            clarity after our first 1:1 strategy call, I&apos;ll{" "}
             <span className="text-green-400">refund you every penny</span>...{" "}
             <span className="italic text-gray-300">It&apos;s that simple.</span>
           </p>
@@ -105,7 +105,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
           <motion.div
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className=" archivo tracking-wider bg-[linear-gradient(100deg,#BE9C63_-8%,#FDE6C0_53%,#BE9C63_111%)] text-green-800 hover:bg-green-600 px-4 py-2 text-center hover:border-green-400"
+            className=" archivo tracking-wider bg-[#00e13c] text-gray-800 hover:bg-green-600 px-4 py-2 text-center hover:border-green-400"
           >
             Claim Your Spot
           </motion.div>
@@ -140,7 +140,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: navItems.length * 0.1 }}
-            className=" archivo tracking-wider bg-[linear-gradient(100deg,#BE9C63_-8%,#FDE6C0_53%,#BE9C63_111%)] text-gray-700 hover:bg-green-600 px-4 py-2 text-center hover:border-green-400"
+            className=" archivo tracking-wider bg-[#00e13c] text-gray-800 hover:bg-green-600 px-4 py-2 text-center hover:border-green-400"
               >
                 Claim Your Spot
               </motion.div>
