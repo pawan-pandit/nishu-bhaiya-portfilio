@@ -151,7 +151,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
 
 
             <motion.section
-                className="relative overflow-hidden px-4 sm:px-6 lg:px-10 pb-10 mt-2  md:py-20 mx-auto   inter"
+                className="relative overflow-hidden px-4 sm:px-6 lg:px-10 pb-10 mt-2   mx-auto   inter"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -232,7 +232,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 1.0 }}>
-                        Spots are limited  <strong>  ( <span className="line-through text-gray-400 mr-1 font-medium">16</span>8 spots left )</strong> — let’s grow your personal brand together.
+                        Spots are limited  <strong>  ( <span className="line-through text-gray-400 mr-1 font-medium">15</span>8 spots left )</strong> — let’s grow your personal brand together.
                     </motion.p>
                 </div>
             </motion.section>
