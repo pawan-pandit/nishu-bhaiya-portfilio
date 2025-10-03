@@ -59,7 +59,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
           <p className="font-sans font-semibold text-[10px] sm:text-xs md:text-sm text-white leading-relaxed">
             I am so confident in what I teach that if you don&apos;t get
             clarity after our first 1:1 strategy call, I&apos;ll{" "}
-            <span className="text-green-400">refund you every penny</span>...{" "}
+            <span className="text-green-400">issue the refund</span>...{" "}
             <span className="italic text-gray-300">It&apos;s that simple.</span>
           </p>
         </div>
@@ -151,7 +151,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
 
 
             <motion.section
-                className="relative overflow-hidden px-4 sm:px-6 lg:px-10 py-2 md:py-20 mx-auto   inter"
+                className="relative overflow-hidden px-4 sm:px-6 lg:px-10 pb-10 mt-2  md:py-20 mx-auto   inter"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -195,7 +195,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.6, delay: 1.0 }}
                                 >
-                                    This is a done-with-you program with <strong className=" italic"> 1:1 strategy calls, private sessions, and step-by-step guidance — </strong>so you can create videos in just 2 hours a week, grow your audience, get more views and start making money from your content.
+                                    This is a done-with-you program with <strong className=" italic"> 1:1 strategy calls, private sessions, and step-by-step guidance — </strong>so you can create videos in just 2 hours a week, grow your audience, get more views and start making <strong className="text-green-600">$30K–$100K/month with YouTube & Instagram.</strong>  
                                 </motion.p>
                             </BoxReveal>
                         </div>
@@ -232,7 +232,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 1.0 }}>
-                        Spots are limited <strong>  ( 8 spots left )</strong> — let’s grow your personal brand together.
+                        Spots are limited  <strong>  ( <span className="line-through text-gray-400 mr-1 font-medium">16</span>8 spots left )</strong> — let’s grow your personal brand together.
                     </motion.p>
                 </div>
             </motion.section>
