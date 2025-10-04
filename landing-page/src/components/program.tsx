@@ -153,8 +153,7 @@ const ProgramSection: React.FC<ProgramSectionProps> = ({ theme }) => {
                             Phase {index + 1}: {project.title}
                         </h2>
                         <h3
-                            className="text-sm sm:text-base md:text-lg lg:text-xl inter font-semibold opacity-90 leading-relaxed text-left"
-                            style={{ color: project.color }}
+                            className="text-sm sm:text-base text-black md:text-lg lg:text-xl inter font-semibold opacity-90 leading-relaxed text-left"
                         >
                             {project.subtitle}
                         </h3>

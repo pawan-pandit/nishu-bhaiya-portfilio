@@ -58,7 +58,7 @@ export default function VideoTestimonials() {
 
          <div className="relative w-full h-[400px] bg-black rounded-2xl border border-white overflow-hidden group">
   <iframe
-    className="absolute top-0 left-0 w-full h-full object-cover transform transition-transform duration-300 ease-in-out group-hover:scale-110"
+    className="absolute top-0 left-0 w-full h-full object-cover transform transition-transform duration-300 ease-in-out scale-125"
     src={testimonial.videoUrl}
     title={`${testimonial.name} Video Testimonial`}
     allowFullScreen

@@ -7,9 +7,20 @@ import { useState } from "react"
 
   const faqs = [
     {
-      q: "What exactly is this program?",
-      a: "This isn't another \"watch and figure it out alone course\" where you're left to watch videos and figure everything out on your own.\nInstead, this is a done-with-you coaching program designed to give you direct support and clear direction every step of the way.\nHere's what makes it different:\n1:1 Strategy Calls & Private Sessions — personalized guidance so you always know your next move.\nStep-by-Step Frameworks — simple systems to help you create consistent, high-quality content in just 2 hours per week.\nDone-for-You Resources — hooks, scripts, templates, and prompts so you can plug and play without guesswork.\nHands-On Support — feedback, accountability, and troubleshooting to keep you on track.\nThe goal? To help you grow your audience, get more views, and start making money from your content—without the overwhelm or wasted time.",
-    },
+    q: "What exactly is this program?",
+    a: `This isn't another "watch and figure it out alone course" where you're left to watch videos and figure everything out on your own.
+
+Instead, this is a done-with-you coaching program designed to give you direct support and clear direction every step of the way.
+
+Here's what makes it different:
+
+- Step-by-step frameworks for content creation.
+- Personalized 1:1 strategy calls and support.
+- Templates, prompts, and done-for-you resources.
+- Hands-on feedback and accountability.
+
+The goal? To help you grow your audience, get more views, and start making money from your content—without the overwhelm or wasted time.`,
+  },
     {
       q: "What happens after I join the program?",
       a: "As soon as you join, you'll receive an email with a booking link to schedule your first 1:1 strategy call. After that, you'll get instant access to the private community and all the resources and tools so you can start right away.",
@@ -100,57 +111,59 @@ export default function FAQSection({ theme = "white" }: FAQSectionProps) {
           </motion.p>
         </motion.div>
 
-        <motion.div variants={itemVariants} className="space-y-4 inter">
-          {faqs.map((faq, index) => (
-            <motion.div
-              key={index}
-              variants={itemVariants}
-              className={`rounded-xl border transition-all duration-300 ${
-                theme === "black"
-                  ? "bg-gray-800 border-gray-700 hover:border-gray-600"
-                  : "bg-white/80 backdrop-blur-sm border-pink-200 hover:border-pink-300 shadow-sm hover:shadow-md"
-              }`}
-            >
-              <button
-                onClick={() => toggleFAQ(index)}
-                className="w-full px-6 py-5 text-left flex items-center justify-between focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2 rounded-xl"
-              >
-                <h3
-                  className={`text-sm sm:text-base md:text-lg leading-relaxed font-bold pr-4 ${theme === "black" ? "text-white" : "text-gray-900"}`}
-                >
-                  {faq.q}
-                </h3>
-                <ChevronDownIcon
-                  className={`w-5 h-5 transition-transform duration-300 flex-shrink-0 ${
-                    openIndex === index ? "rotate-180" : ""
-                  } ${theme === "black" ? "text-gray-400" : "text-gray-500"}`}
-                />
-              </button>
+    <motion.div variants={itemVariants} className="space-y-4 inter">
+  {faqs.map((faq, index) => (
+    <motion.div
+      key={index}
+      variants={itemVariants}
+      className={`rounded-xl border transition-all duration-300 ${
+        theme === "black"
+          ? "bg-gray-800 border-gray-700 hover:border-gray-600"
+          : "bg-white/80 backdrop-blur-sm border-green-200 hover:border-green-300 shadow-sm hover:shadow-md"
+      }`}
+    >
+      <button
+        onClick={() => toggleFAQ(index)}
+        className="w-full px-6 py-5 text-left flex items-center justify-between focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 rounded-xl"
+      >
+        <h3
+          className={`text-sm sm:text-base md:text-lg leading-relaxed font-bold pr-4 ${
+            theme === "black" ? "text-white" : "text-gray-900"
+          }`}
+        >
+         
+          {faq.q}
+        </h3>
+        <ChevronDownIcon
+          className={`w-5 h-5 transition-transform duration-300 flex-shrink-0 ${
+            openIndex === index ? "rotate-180" : ""
+          } ${theme === "black" ? "text-green-400" : "text-green-500"}`}
+        />
+      </button>
 
-              <motion.div
-                initial={false}
-                animate={{
-                  height: openIndex === index ? "auto" : 0,
-                  opacity: openIndex === index ? 1 : 0,
-                }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
-                className="overflow-hidden"
-              >
-                <div className="px-6 pb-5">
-                <p
-  className={`text-sm sm:text-base md:text-lg leading-relaxed ${
-    theme === "black" ? "text-gray-300" : "text-gray-700"
-  } whitespace-pre-line`}
->
-  {faq.a}
-</p>
+      <motion.div
+        initial={false}
+        animate={{
+          height: openIndex === index ? "auto" : 0,
+          opacity: openIndex === index ? 1 : 0,
+        }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+        className="overflow-hidden"
+      >
+        <div className="px-6 py-5">
+          <p
+            className={`text-sm sm:text-base md:text-lg leading-relaxed ${
+              theme === "black" ? "text-gray-300" : "text-gray-700"
+            } whitespace-pre-line`}
+          >
+            {faq.a}
+          </p>
+        </div>
+      </motion.div>
+    </motion.div>
+  ))}
+</motion.div>
 
-
-                </div>
-              </motion.div>
-            </motion.div>
-          ))}
-        </motion.div>
       </div>
     </motion.section>
   )

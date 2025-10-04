@@ -25,7 +25,7 @@ const itemVariants: Variants = {
 const IncludeSection: React.FC<IncludeSectionProps> = ({ theme }) => {
     const features = [
         {
-            title: "Bi-Weekly 1:1 Strategy & Planning Calls — ",
+            title: "Bi-Weekly 1:1 Strategy & Planning Calls  ",
             description: "Get private sessions, personalized guidance and accountability to keep you focused, aligned, and on track, so you always know your next move and never feel like you’re doing it alone.",
         },
         {
@@ -47,7 +47,7 @@ const IncludeSection: React.FC<IncludeSectionProps> = ({ theme }) => {
             description: "You’ll have access to me for support inside the community. When something breaks or stalls, I will help you fix it — fast.",
         },
         {
-            title: "Bonus resources:",
+            title: "Bonus resources",
             description: "Done-for-you resources — checklists, templates, and AI prompts (valued at $1,800): so you can execute with clarity and speed.",
         },
         {
@@ -88,7 +88,7 @@ const IncludeSection: React.FC<IncludeSectionProps> = ({ theme }) => {
             >
                 {/* Left Column: Subheading */}
 
-                <motion.div className="grid grid-cols-1 lg:grid-cols-4 gap-2 items-start" variants={containerVariants}>
+                <motion.div className="grid grid-cols-1 lg:grid-cols-3 gap-2 items-start" variants={containerVariants}>
                     {features.map((feature, index) => (
                         <motion.div
                             key={index}
