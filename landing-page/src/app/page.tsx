@@ -14,6 +14,7 @@ import EndResultSection from "@/components/endResult"
 import CTASection from "@/components/cta"
 import FAQSection from "@/components/question"
 import PriceSection from "@/components/price"
+import VideoTestimonials from "@/components/reviews"
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true)
@@ -70,6 +71,17 @@ export default function Home() {
             >
               <GuideSection theme={theme}  />
             </motion.div>
+              <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+                <section id="reviews">
+
+              <VideoTestimonials />
+              </section>
+            </motion.div>
+            
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
