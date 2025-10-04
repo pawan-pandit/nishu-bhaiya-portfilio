@@ -15,7 +15,7 @@ const testimonials: Testimonial[] = [
     title: "Online University",
     achievement: "Tom recently made his first $100K in sales.",
     videoUrl:
-      "enaa.mp4",
+      "ena.mp4",
   },
   {
     id: "2",
