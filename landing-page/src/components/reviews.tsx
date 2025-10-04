@@ -56,14 +56,16 @@ export default function VideoTestimonials() {
                 <h3 className="text-xl sm:text-2xl font-bold text-white leading-tight">{testimonial.achievement}</h3>
               </div>
 
-         <div className="relative w-full h-[400px] bg-black rounded-2xl border border-white overflow-hidden group">
-  <iframe
-    className="absolute top-0 left-0 w-full h-full object-cover transform transition-transform duration-300 ease-in-out scale-125"
-    src={testimonial.videoUrl}
-    title={`${testimonial.name} Video Testimonial`}
-    allowFullScreen
-    allow="clipboard-write; autoplay; encrypted-media; gyroscope;"
-  />
+       <div className="relative w-full h-[400px] bg-black rounded-2xl border border-white overflow-hidden group">
+  <div className="absolute top-0 left-0 w-full h-full transform scale-125 transition-transform duration-300 ease-in-out group-hover:scale-110">
+    <iframe
+      className="w-full h-full object-cover"
+      src={testimonial.videoUrl}
+      title={`${testimonial.name} Video Testimonial`}
+      allowFullScreen
+      allow="clipboard-write; autoplay; encrypted-media; gyroscope;"
+    />
+  </div>
 </div>
 
 
