@@ -127,7 +127,7 @@ const ProgramSection: React.FC<ProgramSectionProps> = ({ theme }) => {
                             transition: { duration: 0.3, ease: "easeOut" }
                         }}
                     >
-                        <h2 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl doner tracking-wider font-black mb-6 lg:mb-8 text-left text-green-600">
+                        <h2 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl inter  tracking-wider font-black mb-6 lg:mb-8 text-left text-green-600">
                             Phase {index + 1}: {project.title}
                         </h2>
                         <h3

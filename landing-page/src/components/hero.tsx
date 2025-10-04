@@ -164,7 +164,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
                         transition={{ duration: 0.6, delay: 0.6 }}
                     >
                         Get  <strong className="text-green-600 font-black">  More Views </strong> <br />
-                        Build Better Offer<br /> Turn Content Into <strong className="text-green-600 font-black"> Clients</strong>
+                        Build  <strong  className="text-green-600 font-black"> Better Offer</strong> <br /> Turn Content Into <strong className="text-green-600 font-black"> Clients</strong>
                     </motion.h2>
 
                     <div className="relative mx-auto md:mt-8">
