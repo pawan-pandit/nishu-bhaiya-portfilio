@@ -28,6 +28,31 @@ export default function PriceSection() {
 
   return (
     <>
+      <div className="w-full bg-black overflow-hidden">
+        <div className="max-w-5xl mx-auto flex items-center justify-between gap-3 sm:gap-4 md:gap-6 px-3 sm:px-4">
+          {/* Left: Logo - fully visible at all sizes */}
+          <div className="flex-shrink-0 bg-black ">
+            <Image
+              src="/money.svg"
+              alt="100% Money Back Guarantee"
+              width={10}
+              height={10}
+              className="w-[100px] h-[100px] sm:w-[70px] sm:h-[70px] md:w-[90px] md:h-[90px] bg-black  lg:w-[100px] lg:h-[100px]  drop-shadow-lg"
+              priority
+            />
+          </div>
+
+          {/* Right: Text - smaller and more readable */}
+          <div className="flex-1 min-w-0">
+            <p className="font-sans font-semibold text-[10px] sm:text-xs md:text-sm text-white leading-relaxed">
+              I am so confident in what I teach that if you don&apos;t get
+              clarity after our first 1:1 strategy call, I&apos;ll{" "}
+              <span className="text-green-400">issue the refund</span>...{" "}
+              <span className="italic text-gray-300">It&apos;s that simple.</span>
+            </p>
+          </div>
+        </div>
+      </div>
       <section className="relative w-full flex flex-col items-center justify-center px-4 border-t border-green-100 py-10">
         {/* Background */}
         <div className="absolute inset-0 -z-10 bg-[#141414]" />
@@ -96,7 +121,7 @@ export default function PriceSection() {
                     <p className="inter text-sm md:text-lg leading-relaxed text-gray-700">{feature}</p>
                   </motion.div>
                 ))}
-                <p className="inter text-sm md:text-lg leading-relaxed text-gray-700 italic">  👉 Total value: $6,600+</p>
+                <p className="inter text-sm md:text-lg leading-relaxed text-gray-700 italic font-bold">  👉 Total value: $6,600+</p>
 
 
               </div>
@@ -201,31 +226,7 @@ export default function PriceSection() {
         </div>
 
       </section>
-      <div className="w-full bg-black overflow-hidden">
-        <div className="max-w-5xl mx-auto flex items-center justify-between gap-3 sm:gap-4 md:gap-6 px-3 sm:px-4">
-          {/* Left: Logo - fully visible at all sizes */}
-          <div className="flex-shrink-0 bg-black ">
-            <Image
-              src="/money.svg"
-              alt="100% Money Back Guarantee"
-              width={10}
-              height={10}
-              className="w-[100px] h-[100px] sm:w-[70px] sm:h-[70px] md:w-[90px] md:h-[90px] bg-black  lg:w-[100px] lg:h-[100px]  drop-shadow-lg"
-              priority
-            />
-          </div>
-
-          {/* Right: Text - smaller and more readable */}
-          <div className="flex-1 min-w-0">
-            <p className="font-sans font-semibold text-[10px] sm:text-xs md:text-sm text-white leading-relaxed">
-              I am so confident in what I teach that if you don&apos;t get
-              clarity after our first 1:1 strategy call, I&apos;ll{" "}
-              <span className="text-green-400">issue the refund</span>...{" "}
-              <span className="italic text-gray-300">It&apos;s that simple.</span>
-            </p>
-          </div>
-        </div>
-      </div>
+    
 
     </>
   )

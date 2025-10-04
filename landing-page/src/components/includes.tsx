@@ -30,7 +30,7 @@ const IncludeSection: React.FC<IncludeSectionProps> = ({ theme }) => {
         },
         {
             title: "Complete Audit",
-            description: "Of your personal brand platforms, offers, sales funnel, business.",
+            description: "Of your Youtube & Instagram channel, offers, sales funnel, business.",
         },
         {
             title: "Custom Funnel Creation",

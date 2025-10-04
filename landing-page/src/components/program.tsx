@@ -5,23 +5,7 @@ interface ProgramSectionProps {
     theme: "black" | "white"
 }
 
-const containerVariants: Variants = {
-    hidden: { opacity: 0 },
-    visible: {
-        opacity: 1,
 
-
-    },
-};
-
-const itemVariants: Variants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-        opacity: 1,
-        y: 0,
-        transition: { duration: 0.6, ease: easeOut }
-    },
-};
 
 const ProgramSection: React.FC<ProgramSectionProps> = ({ theme }) => {
     const projects = [
@@ -115,24 +99,19 @@ const ProgramSection: React.FC<ProgramSectionProps> = ({ theme }) => {
 
     return (
         <motion.section
-            className={`transition-colors duration-500 px-4 sm:px-6 lg:px-8 text-black xl:px-12 py-10 md:py-20 w-full ${theme === "black" ? "bg-black text-white" : "bg-[#f8f1f3] text-black"}`}
+            className={`transition-colors duration-500 px-4 sm:px-6 lg:px-8 text-black xl:px-12 py-10 md:pt-20 w-full ${theme === "black" ? "bg-black text-white" : "bg-[#f8f1f3] text-black"}`}
 
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            variants={containerVariants}
+          
+        
         >
             <motion.h2
                 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl uppercase tracking-wider doner font-black pb-10"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
+               
             >
                 Program Details
             </motion.h2>
             <motion.p
                 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl tracking-wider opacity-90 doner leading-relaxed  font-black mb-4 lg:mb-6 text-left"
-                variants={itemVariants}
             >
                 A step-by-step system broken down into 5 phases that takes you from confused creator to profitable business owner
             </motion.p>
@@ -141,7 +120,6 @@ const ProgramSection: React.FC<ProgramSectionProps> = ({ theme }) => {
                     <motion.div
                         key={index}
                         className="bg-white  rounded-lg p-6 transition-shadow cursor-pointer mb-10"
-                        variants={itemVariants}
                         whileHover={{
                             y: -8,
                             scale: 1.03,
