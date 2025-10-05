@@ -8,7 +8,7 @@ import Image from "next/image"
 import { ShinyButton } from "./ui/shinny-button"
 import { PulsatingButton } from "./ui/pulse-button"
 import { useState } from "react"
-import { Menu, X } from "lucide-react"
+import { Menu, Quote, X } from "lucide-react"
 
 interface HeroSectionProps {
     theme: "black" | "white"
@@ -158,13 +158,14 @@ const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
             >
                 <div className="relative z-10 ">
                     <motion.h2
-                        className="text-2xl md:text-5xl lg:text-6xl xl:text-7xl uppercase tracking-wider doner font-black mb-2  md:mb-6"
+                        className="text-2xl md:text-5xl lg:text-6xl xl:text-7xl  tracking-wider doner font-black mb-2  md:mb-6"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.6 }}
                     >
-                        Get  <strong className="text-green-600 font-black">  More Views </strong> <br />
-                        Build  <strong  className="text-green-600 font-black"> Better Offer</strong> <br /> Turn Content Into <strong className="text-green-600 font-black"> Clients</strong>
+                        Get More  <strong className="text-green-600 font-black">   Views </strong> <br />
+                         Create <strong  className="text-green-600 font-black"> Offers </strong>  That Sell
+   <br /> Automate your <strong>Funnels</strong> to turn content into  <strong className="text-green-600 font-black"> Clients</strong>
                     </motion.h2>
 
                     <div className="relative mx-auto md:mt-8">
@@ -234,6 +235,37 @@ const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
                         transition={{ duration: 0.6, delay: 1.0 }}>
                         Spots are limited  <strong>  ( <span className="line-through text-gray-400 mr-1 font-medium">15</span>8 spots left )</strong> — let’s grow your personal brand together.
                     </motion.p>
+ <motion.div  className=""
+  initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 1.0 }}>
+  <div className="flex max-w-2xl items-center justify-center ">
+    <div className="flex items-center gap-0 sm:gap-6 py-6">
+      <img
+        src="https://alejandroreyes.com/wp-content/uploads/2025/06/justin-khoe.webp"
+        alt="Justin Khoe"
+        width={100}
+        height={100}
+        className="rounded-full object-cover flex-shrink-0 border-4"
+        loading="lazy"
+        decoding="async"
+      />
+      <div className="flex flex-col ">
+<blockquote className="relative max-w-2xl mx-auto p-4 sm:p-6   ">
+  <p className="text-sm sm:text-lg leading-relaxed inter font-semibold text-black">
+    <Quote className="inline-block w-3 h-3 sm:w-5 sm:h-5 mr-1 text-gray-950 -translate-y-2 rotate-180" />
+    Alejandro helped me launch my first program… 
+    I made $120,465
+    and am officially debt free
+    <Quote className="inline-block w-3 h-3 sm:w-5 sm:h-5 ml-1 text-gray-950 -translate-y-2" />
+  </p>
+   <p className=" inter text-sm sm:text-lg py-2">Justin Kho</p>
+</blockquote>       
+      </div>
+    </div>
+</div>
+ </motion.div>
+                  
                 </div>
             </motion.section>
 

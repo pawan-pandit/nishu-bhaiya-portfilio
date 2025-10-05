@@ -47,7 +47,7 @@ export default function VideoTestimonials() {
           Success Stories
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto">
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
@@ -59,17 +59,17 @@ export default function VideoTestimonials() {
                 </h3>
               </div>
 
-              <div className="relative w-full h-[500px] bg-black rounded-2xl border border-white overflow-hidden group">
+              <div className="relative w-full h-[400px] md:h-[500px] bg-black rounded-2xl border border-white overflow-hidden group">
                 {testimonial.videoUrl.endsWith(".mp4") ? (
-                <video
-  className="absolute top-0 left-0 w-full h-full object-cover"
-  src={testimonial.videoUrl}
-  controls
-  playsInline
-/>
+                  <video
+                    className="absolute bottom-10 sm:-bottom-60 md:-bottom-10 xl:-bottom-2 left-0 w-full h-full object-cover"
+                    src={testimonial.videoUrl}
+                    controls
+                    playsInline
+                  />
                 ) : (
                   <iframe
-                    className="absolute top-0 left-0 w-full h-full object-cover"
+                    className="absolute top-0 left-0 w-full h-full object-center"
                     src={testimonial.videoUrl}
                     title={`${testimonial.name} Video Testimonial`}
                     allow="autoplay; fullscreen; clipboard-write; encrypted-media; gyroscope;"
