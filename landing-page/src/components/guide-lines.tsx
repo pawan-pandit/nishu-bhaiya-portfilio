@@ -4,11 +4,9 @@ import type React from "react"
 import { motion } from "framer-motion"
 import { ArrowRightCircle } from "lucide-react"
 
-interface GuideSectionProps {
-  theme: "black" | "white"
-}
 
-const GuideSection: React.FC<GuideSectionProps> = ({ theme }) => {
+
+const GuideSection: React.FC = () => {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -57,9 +55,8 @@ const GuideSection: React.FC<GuideSectionProps> = ({ theme }) => {
 
   return (
     <motion.div
-      className={`transition-colors duration-500 flex flex-col items-left justify-center text-left mx-auto px-4 sm:px-6 lg:px-8 xl:px-12  w-full ${
-        theme === "black" ? "bg-black text-white" : "bg-[#f8f1f3] text-black"
-      }`}
+      className={`transition-colors duration-500 flex flex-col items-left justify-center text-left mx-auto px-4 sm:px-6 lg:px-8 xl:px-12  w-full 
+       bg-[#f8f1f3] text-black"`}
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
@@ -75,7 +72,7 @@ const GuideSection: React.FC<GuideSectionProps> = ({ theme }) => {
         GROWTH CLUB
       </motion.h2>
       <motion.p
-        className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl  tracking-wider opacity-90 doner leading-relaxed    font-black mb-4 lg:mb-6 text-left"
+        className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl  tracking-wider opacity-90 inter leading-relaxed    font-black mb-4 lg:mb-6 text-left"
         variants={itemVariants}
       >
         A proven system to grow on Instagram and YouTube — Turn views into paid clients… By creating videos in just
@@ -186,10 +183,7 @@ const GuideSection: React.FC<GuideSectionProps> = ({ theme }) => {
 
           <motion.div
             className="mt-8 lg:mt-12 p-6 lg:p-8 rounded-2xl bg-opacity-10 backdrop-blur-sm border border-opacity-20 text-left"
-            style={{
-              backgroundColor: theme === "black" ? "rgba(255, 215, 0, 0.1)" : "rgba(0, 0, 0, 0.05)",
-              borderColor: theme === "black" ? "rgba(255, 215, 0, 0.3)" : "rgba(0, 0, 0, 0.1)",
-            }}
+
             variants={itemVariants}
             initial="hidden"
             whileInView="visible"

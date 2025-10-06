@@ -10,11 +10,9 @@ import { PulsatingButton } from "./ui/pulse-button"
 import { useState } from "react"
 import { Menu, Quote, X } from "lucide-react"
 
-interface HeroSectionProps {
-  theme: "black" | "white"
-}
 
-const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
+
+const HeroSection: React.FC = () => {
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
@@ -37,8 +35,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
 
   return (
     <header
-      className={`transition-colors duration-500 ${theme === "black" ? "bg-black text-white" : "bg-[#f8f1f3] text-black"
-        }`}
+      className={`transition-colors duration-500 bg-[#f8f1f3] text-black"
+        `}
     >
       <div className="w-full bg-black overflow-hidden">
         <div className="max-w-5xl mx-auto flex items-center justify-between gap-3 sm:gap-4 md:gap-6 px-3 sm:px-4">
@@ -71,7 +69,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
       <nav className="flex items-center justify-between px-4 sm:px-6 lg:px-10   mx-auto inter ">
         {/* Logo */}
         <div className="relative flex items-center">
-          <img src={theme === "black" ? "/logo1.svg" : "/logo7.png"}
+          <img src="/logo7.png"
             alt="10xGrowth Logo" className="h-20 w-20 sm:h-40 sm:w-40 bg-[#f8f1f3]" />
 
         </div>
@@ -164,19 +162,19 @@ const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
             transition={{ duration: 0.6, delay: 0.6 }}
           >
             Get More  <strong className="text-green-600 font-black">   Views </strong> <br />
-            Create <strong className="text-green-600 font-black"> Offers </strong> &  <strong className="text-green-600 font-black">Funnels</strong>
+            Create <strong className="text-green-600 font-black"> Offers </strong> <strong className="inter">&</strong> <strong className="text-green-600 font-black">Funnels</strong>
             <br /> Turn your content into <strong className="text-green-600 font-black"> Clients</strong>
           </motion.h2>
 
           <div className="relative mx-auto md:mt-8">
             <div className="relative z-10 space-y-2   md:space-y-6">
               <BoxReveal
-                boxColor={theme === "black" ? "#10b981" : "#059669"}
+                boxColor={"#059669"}
                 duration={0.6}
                 width="100%"
               >
                 <motion.p
-                  className="text-sm md:text-lg opacity-90 max-w-4xl leading-relaxed"
+                  className="text-xs md:text-lg opacity-90 max-w-4xl leading-relaxed"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.8 }}
@@ -186,17 +184,17 @@ const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
               </BoxReveal>
 
               <BoxReveal
-                boxColor={theme === "black" ? "#10b981" : "#059669"}
+                boxColor={"#059669"}
                 duration={0.7}
                 width="100%"
               >
                 <motion.p
-                  className="text-sm md:text-lg opacity-80c max-w-4xl leading-relaxed"
+                  className="text-xs md:text-lg opacity-80c max-w-4xl leading-relaxed"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 1.0 }}
                 >
-                  This done-with-you program gives you <strong>1:1 strategy calls, private sessions, and step-by-step guidance — </strong>so you can confidently create videos in just  <strong>2 hours a week, get more views, create irresistible offers and automated funnels that attract premium clients.     </strong>
+                  This done-with-you program gives you <strong>1:1 strategy calls, private sessions and step-by-step guidance — </strong>so you can confidently create videos in just  <strong>2 hours a week, get more views, create irresistible offers and automated funnels that attract premium clients.     </strong>
                 </motion.p>
 
                 <motion.p
@@ -235,7 +233,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
           // transition={{ duration: 0.6, delay: 1.2 }}
 
           >
-            <PulsatingButton theme={theme} className="uppercase ">Join Before It&apos;s Gone</PulsatingButton>
+            <PulsatingButton  className=" ">Join Before It&apos;s Gone</PulsatingButton>
 
           </motion.div>
 

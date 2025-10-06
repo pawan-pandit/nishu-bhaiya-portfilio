@@ -3,9 +3,7 @@
 import type React from "react"
 import { motion, type Variants, easeOut } from "framer-motion"
 
-interface IncludeSectionProps {
-    theme: "black" | "white"
-}
+
 
 const containerVariants: Variants = {
     hidden: { opacity: 0 },
@@ -34,7 +32,7 @@ const buttonVariants: Variants = {
     },
 }
 
-const IncludeSection: React.FC<IncludeSectionProps> = ({ theme }) => {
+const IncludeSection: React.FC = ({  }) => {
     const features = [
         {
             description: "Grow on YouTube & Instagram without burnout",
@@ -66,7 +64,7 @@ const IncludeSection: React.FC<IncludeSectionProps> = ({ theme }) => {
 
     return (
         <motion.section
-            className={`transition-colors duration-500 px-4 sm:px-6 lg:px-8 xl:px-12 py-10 md:py-20 w-full ${theme === "black" ? "bg-black text-white" : "bg-[#f8f1f3] text-black"}`}
+            className={`transition-colors duration-500 px-4 sm:px-6 lg:px-8 xl:px-12 py-10 md:py-20 w-full bg-[#f8f1f3] text-black"`}
 
             initial="hidden"
             whileInView="visible"
@@ -102,9 +100,7 @@ const IncludeSection: React.FC<IncludeSectionProps> = ({ theme }) => {
         scale: 1.05,
         y: -4,
         boxShadow:
-          theme === "black"
-            ? "0 20px 40px rgba(255,255,255,0.2)"
-            : "0 20px 40px rgba(219,39,119,0.3)",
+             "0 20px 40px rgba(219,39,119,0.3)",
         transition: { duration: 0.2, ease: "easeOut" },
       }}
       whileTap={{
@@ -136,20 +132,19 @@ const IncludeSection: React.FC<IncludeSectionProps> = ({ theme }) => {
                     <motion.div
                         key={index}
                         className={`
-                            ${theme === "black"
-                                ? "bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700"
-                                : "bg-gradient-to-br from-white to-pink-50 border border-pink-100"
-                            }
+                            
+                                 "bg-gradient-to-br from-white to-pink-50 border border-pink-100
+                        
                             rounded-2xl p-6 sm:p-7 lg:p-8 shadow-lg hover:shadow-2xl 
                             transition-all duration-300 cursor-pointer 
                             min-h-[100px]
-                            backdrop-blur-sm
+                            backdrop-blur-sm"
                         `}
                         variants={itemVariants}
                         whileHover={{
                             y: -12,
                             scale: 1.02,
-                            boxShadow: theme === "black" ? "0 20px 40px rgba(255,255,255,0.1)" : "0 20px 40px rgba(219,39,119,0.15)",
+                            boxShadow: "0 20px 40px rgba(219,39,119,0.15)",
                             transition: { duration: 0.3, ease: "easeOut" },
                         }}
                         whileTap={{ scale: 0.98 }}
@@ -160,7 +155,7 @@ const IncludeSection: React.FC<IncludeSectionProps> = ({ theme }) => {
                             className={`
                             inter text-sm sm:text-base md:text-lg lg:text-xl 
                             leading-relaxed
-                            ${theme === "black" ? "text-gray-300" : "text-gray-700"}
+                            text-gray-700
                         `}
                         >
                             {feature.description}

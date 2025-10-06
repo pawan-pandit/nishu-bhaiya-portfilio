@@ -1,13 +1,11 @@
 import React from 'react'
 import { motion, Variants, easeOut } from "framer-motion";
 
-interface ProgramSectionProps {
-    theme: "black" | "white"
-}
 
 
 
-const ProgramSection: React.FC<ProgramSectionProps> = ({ theme }) => {
+
+const ProgramSection: React.FC = ({  }) => {
     const projects = [
         {
             icon: "",
@@ -100,7 +98,7 @@ const ProgramSection: React.FC<ProgramSectionProps> = ({ theme }) => {
 
     return (
         <motion.section
-            className={`transition-colors duration-500 px-4 sm:px-6 lg:px-8 text-black xl:px-12 py-10 md:pt-20 w-full ${theme === "black" ? "bg-black text-white" : "bg-[#f8f1f3] text-black"}`}
+            className={`transition-colors duration-500 px-4 sm:px-6 lg:px-8 text-black xl:px-12 py-10 md:pt-20 w-full bg-[#f8f1f3] text-black"`}
 
           
         

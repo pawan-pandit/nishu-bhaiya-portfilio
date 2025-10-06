@@ -1,9 +1,7 @@
 import React from "react";
 import { motion, Variants, easeOut } from "framer-motion";
 
-interface IncludeSectionProps {
-    theme: "black" | "white";
-}
+
 
 const containerVariants: Variants = {
     hidden: { opacity: 0 },
@@ -22,7 +20,7 @@ const itemVariants: Variants = {
     },
 };
 
-const IncludeSection: React.FC<IncludeSectionProps> = ({ theme }) => {
+const IncludeSection: React.FC = () => {
     const features = [
         {
             title: "Bi-Weekly 1:1 Strategy & Planning Calls  ",
@@ -107,7 +105,7 @@ description: <>Done-for-you resources (valued at $1,800): checklists, templates,
                             <p className={`
                             inter text-sm sm:text-base md:text-lg lg:text-xl 
                             leading-relaxed
-                            ${theme === "black" ? "text-gray-300" : "text-gray-700"}
+                      text-gray-700"
                         `}>{feature.description}</p>
                         </motion.div>
                     ))}

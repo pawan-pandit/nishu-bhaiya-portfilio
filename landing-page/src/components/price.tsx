@@ -56,7 +56,7 @@ export default function PriceSection() {
       <section className="relative w-full flex flex-col items-center justify-center px-4 border-t border-green-100 py-10">
         {/* Background */}
         <div className="absolute inset-0 -z-10 bg-[#141414]" />
-        <div className="absolute inset-0 -z-0 flex items-center justify-center opacity-5">
+        {/* <div className="absolute inset-0 -z-0 flex items-center justify-center opacity-5">
           <Image
             src="/logo7.png"
             alt="Background Logo"
@@ -64,7 +64,7 @@ export default function PriceSection() {
             height={800}
             className="w-[500px] md:w-[700px] lg:w-[900px] object-cover"
           />
-        </div>
+        </div> */}
 
         <motion.h2
           initial={{ opacity: 0, y: -30 }}
@@ -77,7 +77,7 @@ export default function PriceSection() {
         </motion.h2>
 
         {/* Cards container */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full max-w-6xl">
+        <div className="grid grid-cols-1 md:grid-cols-1 gap-10 w-full max-w-xl">
           {/* --- Card 1: 10X Growth Club --- */}
           <motion.div
             initial={{ opacity: 0, y: 50, scale: 0.9 }}
@@ -153,7 +153,7 @@ export default function PriceSection() {
           </motion.div>
 
           {/* --- Card 2: Done-For-You --- */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 50, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.1, ease: "easeOut" }}
@@ -207,7 +207,6 @@ export default function PriceSection() {
               transition={{ delay: 1, type: "spring", stiffness: 200 }}
            className="block  tracking-wider  w-full text-center px-6 py-3 rounded-md border border-green-600 text-blue-600 font-medium  
               transition-all duration-300 ease-in-out transform hover:scale-105 hover:backdrop-blur-md"  >
-              {/* <p className="text-2xl md:text-3xl font-extrabold mb-2">$3,000</p> */}
               <p className=" font-medium tracking-wide text-2xl md:text-3xl "> <span className="inter font-bold">$4500</span> <span className="text-gray-500 text-lg">/month</span></p>
             </motion.div>
 
@@ -222,7 +221,7 @@ export default function PriceSection() {
             </div>
             <BorderBeam duration={6} size={400} className="from-transparent via-yellow-500 to-transparent" />
             <BorderBeam duration={6} delay={3} size={400} borderWidth={2} className="from-transparent via-pink-500 to-transparent" />
-     </div>     </motion.div>
+     </div>     </motion.div> */}
         </div>
 
       </section>
