@@ -69,14 +69,16 @@ const GuideSection: React.FC<GuideSectionProps> = ({ theme }) => {
         className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl uppercase tracking-wider doner font-black     pb-10  "
         variants={itemVariants}
       >
-        <strong className="text-[#FFD700] font-black"> 10X </strong>
+<strong className="bg-gradient-to-r from-[#876B40] via-[#F1DEC0] to-[#6C522A] bg-clip-text text-transparent font-black">
+  10X
+</strong>
         GROWTH CLUB
       </motion.h2>
       <motion.p
-        className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl  tracking-wider opacity-90 doner leading-relaxed   uppercase   font-black mb-4 lg:mb-6 text-left"
+        className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl  tracking-wider opacity-90 doner leading-relaxed    font-black mb-4 lg:mb-6 text-left"
         variants={itemVariants}
       >
-        A proven system to grow on Instagram and YouTube — and turn views into paid clients… by creating videos in just
+        A proven system to grow on Instagram and YouTube — Turn views into paid clients… By creating videos in just
         2 hours a week.
       </motion.p>
 
@@ -171,20 +173,14 @@ const GuideSection: React.FC<GuideSectionProps> = ({ theme }) => {
             <motion.li className="flex items-start gap-2 sm:gap-3" variants={listItemVariants}>
             <span className="text-[#00e13c] text-sm sm:text-base flex-shrink-0 mt-0.5"><ArrowRightCircle/></span>
               <span>
-                <strong>Craft irresistible offers</strong> your audience actually wants to buy
+               Craft irresistible offers and package your services to make <strong>$20K–$350K/month</strong>.
               </span>
             </motion.li>
-            <motion.li className="flex items-start gap-2 sm:gap-3" variants={listItemVariants}>
-            <span className="text-[#00e13c] text-sm sm:text-base flex-shrink-0 mt-0.5"><ArrowRightCircle/></span>
-              <span>
-                Price and package your services for <strong>predictable monthly income</strong>
-              </span>
-            </motion.li>
+           
             <motion.li className="flex items-start gap-2 sm:gap-3" variants={listItemVariants}>
             <span className="text-[#00e13c] text-sm sm:text-base flex-shrink-0 mt-0.5"><ArrowRightCircle/></span>
             <span>
-                Build a simple sales funnel that <strong>turns views into paying clients</strong>
-              </span>
+ Build and <strong>automate funnels</strong> that turn your views into <strong>paid clients. </strong>             </span>
             </motion.li>
           </motion.ul>
 

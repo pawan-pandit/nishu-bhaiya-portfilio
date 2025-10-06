@@ -126,7 +126,7 @@ const IncludeSection: React.FC<IncludeSectionProps> = ({ theme }) => {
                 By the end of this program, you&apos;ll leave with a complete system to grow your brand, monetize your audience, and turn attention into consistent clients & income — by spending just 2 hours per week creating content.      </motion.p>
 
             <motion.div
-                className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mb-12 md:mb-16"
+                className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mb-12 md:mb-16 mx-auto max-w-7xl"
                 variants={containerVariants}
             >
                 <h4 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl doner tracking-wider font-semibold mb-6 lg:mb-8 text-left">

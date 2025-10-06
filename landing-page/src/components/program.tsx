@@ -12,18 +12,18 @@ const ProgramSection: React.FC<ProgramSectionProps> = ({ theme }) => {
         {
             icon: "",
             title: "Foundation & Clarity",
-            subtitle: "Set Your Channel & Brand Up for Success",
+            subtitle: "",
             description:
                 "We start by building the right foundation. Without clarity, everything else falls apart.",
             point: [
-                "1:1 Strategy Calls - Bi-weekly private sessions with personalized roadmap",
-                "The 10x Productivity Blueprint - Simple system to 10x your growth",
+                "1:1 Strategy Calls: Bi-weekly private sessions with personalized roadmap",
+                "10x Productivity Blueprint — Simple system to 10x your growth",
                 "Niche & Audience Clarity - Get crystal clear on your ideal audience",
                 "Create content in just 2 hours per week",
                 "Content Repurposing System - Turn 1 video into multiples posts and content",
-                "Channel Positioning + Niche Clarity"
+                "Channel Positioning"
             ],
-            outcome: "Clarity on your niche, audience, and brand.You’ll learn how to create 1 YouTube video and 4 Instagram videos in just 2 hours per week—and repurpose that content into multiple posts plus an email, so you can stay consistent without the overwhelm.",
+            outcome: "Get clear on your niche, audience, and brand. Learn to make 1 YouTube video and 4 Instagram videos in 2 hours a week—and repurpose them into posts and emails to stay consistent without stress.",
 
             color: "#BBACAF",
         },
@@ -32,7 +32,7 @@ const ProgramSection: React.FC<ProgramSectionProps> = ({ theme }) => {
             title: "Growth Engines",
             subtitle: "Create Content That Gets Clicks & Keeps Viewers Watching",
             description:
-                "This is where growth happens. You'll master the two biggest levers that decide your reach.",
+                "",
             point: [
                 "Proven Rules for Thumbnails That Get Clicked",
 
@@ -41,16 +41,16 @@ const ProgramSection: React.FC<ProgramSectionProps> = ({ theme }) => {
                 "The Script Analysis Method for Maximum Views",
                 "Winning Script Frameworks Built to Hook & Hold Attention",
 
-                "How to write script & Story Formulas That Always Work Online"
+                "How to Write Scripts & Story Formulas That Always Hook Viewers"
 
             ],
-            outcome: "Learn to make thumbnails that grab attention and write hooks, scripts and stories that keep people watching.",
+            outcome: "Learn to create thumbnails that grab attention and write hooks, scripts, and stories that keep viewers watching.",
             color: "#BBACAF",
         },
         {
             icon: "",
             title: "Execution & Scaling",
-            subtitle: "From Planning to Publishing Without the Chaos",
+            subtitle: "",
             description:
                 "Most creators waste 5x more time than needed because their process is messy. I'll fix that.",
             point: [
@@ -65,16 +65,16 @@ const ProgramSection: React.FC<ProgramSectionProps> = ({ theme }) => {
         {
             icon: "",
             title: "Offer & Pricing Mastery",
-            subtitle: "Turn views into predictable monthly income",
+            subtitle: "",
             description:
                 "Views are great, but money pays the bills. Learn how to turn your audience into consistent revenue.",
             point: [
                 "How to Make Money With YouTube & Instagram",
                 "How to Create an Irresistible Offer Your Audience Can't Refuse",
-                "Pricing Strategies That Work - Low-ticket to high-ticket",
-                "Market Research: Discover What People Actually Want to Buy",
+                "Pricing Strategies That Work: Low-ticket to high-ticket",
+                "Market Analysis: Uncover What Your Audience Truly Wants to Buy",
             ],
-            outcome: "Clear offer + pricing strategy for both low-ticket and high-ticket programs—designed to match your audience and turn viewers into loyal, paying customers.",
+            outcome: "A clear offer and pricing strategy for both low and high-ticket programs—built to attract your audience and turn viewers into loyal customers.",
 
             color: "#BBACAF",
         },
@@ -83,16 +83,17 @@ const ProgramSection: React.FC<ProgramSectionProps> = ({ theme }) => {
             title: "The Funnel System",
             subtitle: "Turn views into sales on autopilot",
             description:
-                "Plug your audience growth into a complete funnel that converts viewers into paying customers.",
+                "",
             point: [
                 "High-Converting Sales Pages - Copy + design secrets",
                 "YouTube & Instagram Sales Funnel Step-by-step",
                 "Video Sales Letters (VSLs) - Sell directly through YouTube",
                 "Complete Email Marketing System - Nurture & convert automatically",
                 "Lead Magnet System - Build your list while you sleep",
-                "Launch Systems for low-ticket & high-ticket products"
+                "Launch Systems for low-ticket & high-ticket products",
+                "Discover the best tools to save time & money to grow your personal brand efficiently."
             ],
-            outcome: "A repeatable sales machine built around your content. Every video becomes part of a funnel that grows your business.",
+            outcome: "A repeatable sales system built around your content—where every video feeds your YouTube, Instagram, and email funnels to grow your business.",
             color: "#BBACAF",
         },
     ];
@@ -113,9 +114,9 @@ const ProgramSection: React.FC<ProgramSectionProps> = ({ theme }) => {
             <motion.p
                 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl tracking-wider opacity-90 doner leading-relaxed  font-black mb-4 lg:mb-6 text-left"
             >
-                A step-by-step system broken down into 5 phases that takes you from confused creator to profitable business owner
+                A step-by-step growth system broken down into 5 phases that takes you from confused creator to profitable business owner
             </motion.p>
-            <div className="mx-auto">
+            <div className="mx-auto max-w-7xl">
                 {projects.map((project, index) => (
                     <motion.div
                         key={index}

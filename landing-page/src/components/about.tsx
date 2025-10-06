@@ -40,11 +40,11 @@ const AboutSection: React.FC<AboutSectionProps> = ({ theme }) => {
             >
                 About me
             </motion.h2>
-            <motion.p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl  tracking-wider opacity-90 doner leading-relaxed   uppercase   font-black mb-4 lg:mb-6 text-left"
+            <motion.p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl  tracking-wider opacity-90 doner leading-relaxed      font-black mb-4 lg:mb-6 text-left"
                 variants={itemVariants}>
-                I help creators, coaches, and entrepreneurs grow their personal brand
-                on <strong className="text-green-600 inter">YouTube </strong> <strong className="text-green-600 inter"> &</strong> <strong className=" inter text-green-600"> Instagram</strong>, craft offers that make money,
-                and build funnels that bring in clients on repeat.
+                I help creators, coaches and entrepreneurs grow their personal brand
+                on <strong className="text-green-600 inter">YouTube </strong> <strong className="text-green-600 inter"> &</strong> <strong className=" inter text-green-600"> Instagram</strong>, <strong className="inter">craft offers </strong>that make money
+                and <strong className="inter"> build funnels</strong> that bring in clients on repeat.
             </motion.p>
             <div className=" mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
@@ -81,7 +81,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ theme }) => {
                             Helped scale a Los Angeles-based ed-tech company  <strong>(TTP)</strong> with my team to <strong>$12 Million in Revenue in 4.5 years</strong>
                         </motion.li>
                         <motion.li variants={itemVariants}>
-                            I was a business partner of <strong className="text-green-600">Nolan Molt</strong> (former Think Media Creative Director), and together we scaled our business to $400K+                        </motion.li>
+                            I was a business partner of <strong className="text-green-600">Nolan Molt</strong> (former Think Media Creative Director), and together we scaled our business to <strong>$350K+ </strong>                       </motion.li>
                         <motion.li variants={itemVariants}>
                             Worked with <strong>150+ creators and entrepreneurs</strong>, helping them grow their personal brand and turn their views into real revenue.                        </motion.li>
 

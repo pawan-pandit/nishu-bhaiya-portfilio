@@ -77,7 +77,7 @@ export default function PriceSection() {
         </motion.h2>
 
         {/* Cards container */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-6xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full max-w-6xl">
           {/* --- Card 1: 10X Growth Club --- */}
           <motion.div
             initial={{ opacity: 0, y: 50, scale: 0.9 }}
