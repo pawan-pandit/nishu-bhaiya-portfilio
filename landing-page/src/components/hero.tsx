@@ -162,7 +162,7 @@ const HeroSection: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.6 }}
           >
             Get More  <strong className="text-green-600 font-black">   Views </strong> <br />
-            Create <strong className="text-green-600 font-black"> Offers </strong> <strong className="inter">&</strong> <strong className="text-green-600 font-black">Funnels</strong>
+            Create <strong className="text-green-600 font-black"> Offers </strong> <span className="inter">&</span>  <strong className="text-green-600 font-black">Funnels</strong>
             <br /> Turn your content into <strong className="text-green-600 font-black"> Clients</strong>
           </motion.h2>
 
@@ -209,17 +209,7 @@ const HeroSection: React.FC = () => {
               </BoxReveal>
             </div>
 
-            {/* <div className="absolute inset-0 md:inset-y-0 md:right-0 w-full h-64 md:h-full opacity-10 pointer-events-none">
-                            <Image
-                                src={theme === "black" ? "/logo1.svg" : "/logo3.png"} // dynamically choose image
-                                alt="10xGrowth Logo"
-                                fill
-                                className="object-contain object-center md:object-right drop-shadow-2xl"
-                                priority
-                            />
-
-                            <div className="absolute inset-0 bg-gradient-to-l from-black/40 via-transparent to-transparent md:from-transparent pointer-events-none" />
-                        </div> */}
+     
 
           </div>
 
