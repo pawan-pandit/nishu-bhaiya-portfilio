@@ -1,12 +1,14 @@
-import React from 'react'
-import { motion, Variants, easeOut } from "framer-motion";
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
+const ProgramSection: React.FC = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
+  const toggleDropdown = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
 
-
-
-const ProgramSection: React.FC = ({  }) => {
-    const projects = [
+   const projects = [
         {
             icon: "",
             title: "Foundation & Clarity",
@@ -96,65 +98,87 @@ const ProgramSection: React.FC = ({  }) => {
         },
     ];
 
-    return (
-        <motion.section
-            className={`transition-colors duration-500 px-4 sm:px-6 lg:px-8 text-black xl:px-12 py-10 md:pt-20 w-full bg-[#f8f1f3] text-black"`}        >
-            <motion.h2
-                className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl uppercase tracking-wider doner font-black pb-10" 
-            >
-                Program Details
-            </motion.h2>
-            <motion.p
-                className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl tracking-wider opacity-90 doner leading-relaxed  font-black mb-4 lg:mb-6 text-left"
-            >
-                A step-by-step growth system broken down into 5 phases that takes you from confused creator to profitable business owner
-            </motion.p>
-            <div className="mx-auto max-w-7xl">
-                {projects.map((project, index) => (
-                    <motion.div
-                        key={index}
-                        className="bg-white  rounded-lg p-6 transition-shadow cursor-pointer mb-10"
-                        whileHover={{
-                            y: -8,
-                            scale: 1.03,
-                            boxShadow: "0 10px 20px rgba(0,0,0,0.2)",
-                            transition: { duration: 0.3, ease: "easeOut" }
-                        }}
-                    >
-                        <h2 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl inter  tracking-wider font-black mb-6 lg:mb-8 text-left text-green-600">
-                            Phase {index + 1}: {project.title}
-                        </h2>
-                        <h3
-                            className="text-sm sm:text-base text-black md:text-lg lg:text-xl inter font-semibold opacity-90 leading-relaxed text-left"
-                        >
-                            {project.subtitle}
-                        </h3>
-                        <p className="text-sm sm:text-base md:text-lg lg:text-xl inter font-semibold opacity-90 leading-relaxed text-left mb-6">
-                            {project.description}
-                        </p>
-                        <div className="flex flex-col md:flex-row gap-8">
-                            <div className="md:w-1/2">
-                                <h4 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl doner tracking-wider font-semibold mb-6 lg:mb-8 text-left">
-                                    What you&apos;ll get:
-                                </h4>
-                                <ul className="list-disc pl-5 inter text-sm md:text-lg opacity-90 leading-relaxed">
-                                    {project.point.map((item, idx) => (
-                                        <li key={idx} className="mb-2">{item}</li>
-                                    ))}
-                                </ul>
-                            </div>
-                            <div className="md:w-1/2 rounded-lg p-6 bg-[#0000000d]">
-                                <h4 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl doner tracking-wider font-semibold mb-6 lg:mb-8 text-left">
-                                    Outcome:
-                                </h4>
-                                <p className="list-disc pl-5 inter text-sm md:text-lg opacity-90 leading-relaxed">{project.outcome}</p>
-                            </div>
-                        </div>
-                    </motion.div>
-                ))}
-            </div>
-        </motion.section>
-    )
-}
+  return (
+    <motion.section
+      className="transition-colors duration-500 px-4 sm:px-6 lg:px-8 text-black xl:px-12 py-10 md:pt-20 w-full bg-[#f8f1f3] "
+    >
+      <motion.h2 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl uppercase tracking-wider doner font-black pb-10">
+        Program Details
+      </motion.h2>
+      <motion.p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl tracking-wider opacity-90 doner leading-relaxed font-black mb-4 lg:mb-6 text-left">
+        A step-by-step growth system broken down into 5 phases that takes you from confused creator to profitable business owner
+      </motion.p>
 
-export default ProgramSection
+      <div className="mx-auto max-w-7xl">
+        {projects.map((project, index) => (
+          <motion.div
+            key={index}
+            className="bg-white rounded-lg p-6 transition-shadow cursor-pointer mb-6"
+          >
+            <div
+              onClick={() => toggleDropdown(index)}
+  className="flex justify-between items-center cursor-pointer group"
+            >
+  <h2 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl inter tracking-wider font-black text-left text-green-600 group-hover:underline decoration-green-600">
+                Phase {index + 1}: {project.title}
+              </h2>
+              <motion.span
+                animate={{ rotate: openIndex === index ? 180 : 0 }}
+                transition={{ duration: 0.3 }}
+                className="text-2xl text-gray-700 "
+              >
+                ▼
+              </motion.span>
+            </div>
+
+            <AnimatePresence>
+              {openIndex === index && (
+                <motion.div
+                  key="content"
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.4, ease: "easeOut" }}
+                  className="overflow-hidden mt-6"
+                >
+                  <h3 className="text-sm sm:text-base text-black md:text-lg lg:text-xl inter font-semibold opacity-90 leading-relaxed text-left">
+                    {project.subtitle}
+                  </h3>
+                  <p className="text-sm sm:text-base md:text-lg lg:text-xl inter font-semibold opacity-90 leading-relaxed text-left mb-6">
+                    {project.description}
+                  </p>
+
+                  <div className="flex flex-col md:flex-row gap-8">
+                    <div className="md:w-1/2">
+                      <h4 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl doner tracking-wider font-semibold mb-6 lg:mb-8 text-left">
+                        What you&apos;ll get:
+                      </h4>
+                      <ul className="list-disc pl-5 inter text-sm md:text-lg opacity-90 leading-relaxed">
+                        {project.point.map((item, idx) => (
+                          <li key={idx} className="mb-2">
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div className="md:w-1/2 rounded-lg p-6 bg-[#0000000d]">
+                      <h4 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl doner tracking-wider font-semibold mb-6 lg:mb-8 text-left">
+                        Outcome:
+                      </h4>
+                      <p className="inter text-sm md:text-lg opacity-90 leading-relaxed">
+                        {project.outcome}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </motion.div>
+        ))}
+      </div>
+    </motion.section>
+  );
+};
+
+export default ProgramSection;

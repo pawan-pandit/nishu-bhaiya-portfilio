@@ -84,7 +84,7 @@ const IncludeSection: React.FC = ({ }) => {
                 <motion.div variants={buttonVariants}>
                     <motion.button
                         className={` px-8 py-4 text-lg sm:text-xl  text-white archivo
-        font-black doner tracking-wider uppercase
+        font-black archivo tracking-wider uppercase
         rounded-lg transition-all duration-300
          bg-[#00e13c]
         shadow-xl hover:shadow-2xl
