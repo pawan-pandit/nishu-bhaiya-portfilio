@@ -10,7 +10,7 @@ const faqs = [
     q: "What exactly is this program?",
     a: `This isn't another "watch and figure it out alone course" where you're left to watch videos and figure everything out on your own.
 
-Instead, this is a done-with-you coaching program designed to give you direct support and clear direction every step of the way.
+Instead, this is a done-with-you 12 week coaching program designed to give you direct support and clear direction every step of the way.
 
 Here's what makes it different:
 

@@ -36,8 +36,13 @@ const testimonials: Testimonial[] = [
 ]
 
 const images = [
+
+ 
+ "nolan1.png",
+ "nolan2.jpg",
+ 
   "review4.png",
-  "review7.jpg",
+  "review13.jpeg",
   "review8.jpg",
   "review9.jpg",
   {
@@ -123,36 +128,47 @@ export default function VideoTestimonials() {
           ))}
         </div>
 
-        <motion.section
-          id="photos"
-          className="mt-20"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <div className="columns-1 sm:columns-2 gap-4 mx-auto max-w-7xl">
-            {images.map((item, idx) => {
-              const imageUrl = typeof item === "string" ? item : item.img
-              const caption = typeof item === "object" && item.text ? item.text : null
+     <motion.section
+  id="photos"
+  className="mt-20"
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+  viewport={{ once: true }}
+>
+  <div className="columns-1 sm:columns-2 gap-4 mx-auto max-w-7xl">
+   {images.map((item, idx) => {
+  const imageUrl = typeof item === "string" ? item : item.img
+  const caption = typeof item === "object" && item.text ? item.text : null
 
-              return (
-                <BlurFade key={imageUrl} delay={0.25 + idx * 0.05} inView>
-                  <div className="mb-4 w-full">
-                    <img
-                      className="w-full rounded-lg object-cover hover:scale-105 transition-transform duration-300"
-                      src={imageUrl}
-                      alt={`Review ${idx + 1}`}
-                    />
-                    {caption && (
-                      <p className="mt-2 text-sm sm:text-lg text-gray-700 font-bold">{caption}</p>
-                    )}
-                  </div>
-                </BlurFade>
-              )
-            })}
-          </div>
-        </motion.section>
+  const isEmailScreenshot = imageUrl.includes("nolan") // or check for other email files if needed
+
+  return (
+    <BlurFade key={imageUrl} delay={0.25 + idx * 0.05} inView>
+      <div className=" w-full flex flex-col items-center">
+        <img
+          className={`w-full rounded-lg hover:scale-105 transition-transform duration-300 ${
+            isEmailScreenshot
+              ? "object-contain max-h-[400px] "
+              : "object-cover max-h-[550px]"
+          }`}
+          src={imageUrl}
+          alt={`Review ${idx + 1}`}
+        />
+        {caption && (
+          <p className="mt-2 text-sm sm:text-lg text-gray-700 font-bold text-center">
+            {caption}
+          </p>
+        )}
+       
+      </div>
+    </BlurFade>
+  )
+})}
+
+  </div>
+</motion.section>
+
 
       </div>
     </div>
