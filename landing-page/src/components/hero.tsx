@@ -2,10 +2,7 @@
 
 import type React from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { MorphingText } from "./ui/flipword"
-import { BoxReveal } from "./ui/box-revel"
 import Image from "next/image"
-import { ShinyButton } from "./ui/shinny-button"
 import { PulsatingButton } from "./ui/pulse-button"
 import { useState } from "react"
 import { Menu, Quote, X } from "lucide-react"
@@ -40,7 +37,6 @@ const HeroSection: React.FC = () => {
     >
       <div className="w-full bg-black overflow-hidden">
         <div className="max-w-5xl mx-auto flex items-center justify-between gap-3 sm:gap-4 md:gap-6 px-3 sm:px-4">
-          {/* Left: Logo - fully visible at all sizes */}
           <div className="flex-shrink-0 bg-black ">
             <Image
               src="/money.svg"
@@ -51,15 +47,13 @@ const HeroSection: React.FC = () => {
               priority
             />
           </div>
-
-          {/* Right: Text - smaller and more readable */}
           <div className="flex-1 min-w-0">
-            <p className="font-sans font-semibold text-[10px] sm:text-xs md:text-sm text-white leading-relaxed">
+            <h6 className="font-sans font-semibold text-[10px] sm:text-xs md:text-sm text-white leading-relaxed">
               I am so confident in what I teach that if you don&apos;t get
               clarity after our first 1:1 strategy call, I&apos;ll{" "}
               <span className="text-green-400">issue the refund</span>...{" "}
               <span className="italic text-gray-300">It&apos;s that simple.</span>
-            </p>
+            </h6>
           </div>
         </div>
       </div>
@@ -67,11 +61,8 @@ const HeroSection: React.FC = () => {
 
 
       <nav className="flex items-center justify-between px-4 sm:px-6 lg:px-10   mx-auto inter ">
-        {/* Logo */}
         <div className="relative flex items-center">
-          <img src="/logo7.png"
-            alt="10xGrowth Logo" className="h-20 w-20 sm:h-40 sm:w-40 bg-[#f8f1f3]" />
-
+          <img src="/logo7.png" alt="10xGrowth Logo" className="h-20 w-20 sm:h-40 sm:w-40 bg-[#f8f1f3]" />
         </div>
 
         <div className="hidden lg:flex items-center gap-6 xl:gap-8 doner">
@@ -108,7 +99,6 @@ const HeroSection: React.FC = () => {
             Claim Your Spot
           </motion.div>
         </motion.div>
-
       </nav>
 
 
@@ -162,17 +152,11 @@ const HeroSection: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.6 }}
           >
             Get More  <strong className="text-green-600 font-black">   Views </strong> <br />
-            Create <strong className="text-green-600 font-black"> Offers </strong> <span className="inter">&</span>  <strong className="text-green-600 font-black">Funnels</strong>
+            Create <strong className="text-green-600 font-black"> Offers </strong> <span className="inter font-semibold">&</span>  <strong className="text-green-600 font-black">Funnels</strong>
             <br /> Turn your content into <strong className="text-green-600 font-black"> Clients</strong>
           </motion.h2>
-
           <div className="relative mx-auto md:mt-8">
             <div className="relative z-10 space-y-2   md:space-y-6">
-              <BoxReveal
-                boxColor={"#059669"}
-                duration={0.6}
-                width="100%"
-              >
                 <motion.p
                   className="text-xs md:text-lg opacity-90 max-w-4xl leading-relaxed"
                   initial={{ opacity: 0, y: 20 }}
@@ -181,13 +165,6 @@ const HeroSection: React.FC = () => {
                 >
                   Tired of courses that leave you feeling stuck and alone?
                 </motion.p>
-              </BoxReveal>
-
-              <BoxReveal
-                boxColor={"#059669"}
-                duration={0.7}
-                width="100%"
-              >
                 <motion.p
                   className="text-xs md:text-lg opacity-80c max-w-4xl leading-relaxed"
                   initial={{ opacity: 0, y: 20 }}
@@ -196,35 +173,26 @@ const HeroSection: React.FC = () => {
                 >
                   This done-with-you program gives you <strong>1:1 strategy calls, private sessions and step-by-step guidance — </strong>so you can confidently create videos in just  <strong>2 hours a week, get more views, create irresistible offers and automated funnels that attract premium clients.     </strong>
                 </motion.p>
-
                 <motion.p
                   className="text-sm md:text-lg opacity-80c max-w-4xl leading-relaxed"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 1.0 }}
                 >
-                  Start making <strong className="text-green-600 font-black" > $20K–$350K/month with YouTube & Instagram.</strong>
-
+                  Start making <strong className="text-green-600 font-black" > $20K–$100K/month with YouTube & Instagram.</strong>
                 </motion.p>
-              </BoxReveal>
             </div>
 
      
 
           </div>
-
-
           <motion.div
             className="mt-6 max-w-2xl "
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-          // transition={{ duration: 0.6, delay: 1.2 }}
-
-          >
+            animate={{ opacity: 1, y: 0 }}>
             <PulsatingButton  className=" ">Join Before It&apos;s Gone</PulsatingButton>
-
           </motion.div>
 
           <motion.p className="my-2 px-2 py-1 italic rounded-md text-sm md:text-base opacity-80c max-w-2xl  text-gray-800 leading-relaxed "
@@ -240,7 +208,7 @@ const HeroSection: React.FC = () => {
             <div className="flex max-w-2xl items-center justify-center ">
               <div className="flex items-center gap-0 sm:gap-6 py-6">
                 <img
-                  src="https://alejandroreyes.com/wp-content/uploads/2025/06/justin-khoe.webp"
+                  src="/nolan.jpg"
                   alt="Justin Khoe"
                   width={100}
                   height={100}
@@ -257,17 +225,14 @@ const HeroSection: React.FC = () => {
                       and am officially debt free
                       <Quote className="inline-block w-3 h-3 sm:w-5 sm:h-5 ml-1 text-gray-950 -translate-y-2" />
                     </p>
-                    <p className=" inter text-sm sm:text-lg py-2">Justin Kho</p>
+                    <p className=" inter text-sm sm:text-lg py-2">Nolan Molt</p>
                   </blockquote>
                 </div>
               </div>
             </div>
           </motion.div>
-
         </div>
       </motion.section>
-
-
     </header>
   )
 }

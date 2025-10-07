@@ -20,7 +20,7 @@ const itemVariants: Variants = {
     },
 };
 
-const AboutSection: React.FC = ({  }) => {
+const AboutSection: React.FC = ({ }) => {
     return (
         <motion.section
             className={`transition-colors duration-500  px-4 sm:px-6 lg:px-8 xl:px-12 py-10 md:py-20 w-full bg-[#f8f1f3] text-black"
@@ -46,7 +46,6 @@ const AboutSection: React.FC = ({  }) => {
             </motion.p>
             <div className=" mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-                {/* Left Side Image */}
                 <motion.div variants={itemVariants} className="flex justify-center">
                     <img
                         src='/founder1.png'
@@ -54,8 +53,6 @@ const AboutSection: React.FC = ({  }) => {
                         className="rounded-lg shadow-lg max-w-full h-auto"
                     />
                 </motion.div>
-
-                {/* Right Side Content */}
                 <motion.div
                     className="flex flex-col space-y-6 text-left"
                     variants={containerVariants}
@@ -158,7 +155,6 @@ const AboutSection: React.FC = ({  }) => {
                         You don’t need another “content hack”
                         You need someone who’s already walked the path — and can walk it with you.
                         That’s exactly what I do.
-
                     </motion.p>
 
 
@@ -170,7 +166,6 @@ const AboutSection: React.FC = ({  }) => {
                         >
                             Join the program now
                         </motion.button>
-
                     </motion.div>
                 </motion.div>
             </div>

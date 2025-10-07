@@ -1,5 +1,4 @@
 "use client"
-
 import type React from "react"
 import { motion, type Variants, easeOut } from "framer-motion"
 
@@ -32,7 +31,7 @@ const buttonVariants: Variants = {
     },
 }
 
-const IncludeSection: React.FC = ({  }) => {
+const IncludeSection: React.FC = ({ }) => {
     const features = [
         {
             description: "Grow on YouTube & Instagram without burnout",
@@ -71,48 +70,43 @@ const IncludeSection: React.FC = ({  }) => {
             viewport={{ once: true, amount: 0.1 }}
             variants={containerVariants}
         >
-       <motion.div
-  className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 pb-10"
-  variants={itemVariants}
->
-  {/* Heading */}
-  <motion.h2
-    className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl uppercase tracking-wider doner font-black"
-    variants={itemVariants}
-  >
-    The End Result
-  </motion.h2>
+            <motion.div
+                className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 pb-10"
+                variants={itemVariants}
+            >
+                <motion.h2
+                    className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl uppercase tracking-wider doner font-black"
+                    variants={itemVariants}
+                >
+                    The End Result
+                </motion.h2>
 
-  {/* Button */}
-  <motion.div variants={buttonVariants}>
-    <motion.button
-      className={`
-        px-8
-        py-4 
-        text-lg sm:text-xl  text-white archivo
+                <motion.div variants={buttonVariants}>
+                    <motion.button
+                        className={` px-8 py-4 text-lg sm:text-xl  text-white archivo
         font-black doner tracking-wider uppercase
         rounded-lg transition-all duration-300
          bg-[#00e13c]
         shadow-xl hover:shadow-2xl
         transform-gpu
       `}
-      whileHover={{
-        scale: 1.05,
-        y: -4,
-        boxShadow:
-             "0 20px 40px rgba(219,39,119,0.3)",
-        transition: { duration: 0.2, ease: "easeOut" },
-      }}
-      whileTap={{
-        scale: 0.95,
-        transition: { duration: 0.1 },
-      }}
-      onClick={() => console.log("Join Now clicked!")}
-    >
-      Join Now
-    </motion.button>
-  </motion.div>
-</motion.div>
+                        whileHover={{
+                            scale: 1.05,
+                            y: -4,
+                            boxShadow:
+                                "0 20px 40px rgba(219,39,119,0.3)",
+                            transition: { duration: 0.2, ease: "easeOut" },
+                        }}
+                        whileTap={{
+                            scale: 0.95,
+                            transition: { duration: 0.1 },
+                        }}
+                        onClick={() => console.log("Join Now clicked!")}
+                    >
+                        Join Now
+                    </motion.button>
+                </motion.div>
+            </motion.div>
 
 
             <motion.p
@@ -126,15 +120,14 @@ const IncludeSection: React.FC = ({  }) => {
                 variants={containerVariants}
             >
                 <h4 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl doner tracking-wider font-semibold mb-6 lg:mb-8 text-left">
-                    You&apos;ll know how to:                                </h4>
+                    You&apos;ll know how to:
+                </h4>
 
                 {features.map((feature, index) => (
                     <motion.div
                         key={index}
                         className={`
-                            
                                  "bg-gradient-to-br from-white to-pink-50 border border-pink-100
-                        
                             rounded-2xl p-6 sm:p-7 lg:p-8 shadow-lg hover:shadow-2xl 
                             transition-all duration-300 cursor-pointer 
                             min-h-[100px]
@@ -149,8 +142,6 @@ const IncludeSection: React.FC = ({  }) => {
                         }}
                         whileTap={{ scale: 0.98 }}
                     >
-
-
                         <p
                             className={`
                             inter text-sm sm:text-base md:text-lg lg:text-xl 
@@ -162,27 +153,23 @@ const IncludeSection: React.FC = ({  }) => {
                         </p>
                     </motion.div>
                 ))}
-                
+
             </motion.div>
             <div className="relative rounded-lg p-6 bg-[#0000000d] overflow-hidden">
-  {/* Background Logo */}
-  <img
-    src="/long2.png" // ← replace with your logo path
-    alt="Logo"
-    className="absolute inset-0 w-full h-full object-contain opacity-5 pointer-events-none"
-  />
-
-  {/* Content */}
-  <div className="relative z-10">
-    <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl tracking-wider opacity-90 inter leading-relaxed font-black mb-2 text-left">
-      Transform from confused creator to profitable business owner
-    </p>
-    <p className="inter text-sm sm:text-base md:text-lg italic leading-relaxed">
-      Stop guessing and start growing with a proven system that&apos;s helped 150+ creators and entrepreneurs build sustainable, profitable businesses powered by content.
-    </p>
-  </div>
-</div>
-    
+                <img
+                    src="/long2.png"
+                    alt="Logo"
+                    className="absolute inset-0 w-full h-full object-contain opacity-5 pointer-events-none"
+                />
+                <div className="relative z-10">
+                    <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl tracking-wider opacity-90 inter leading-relaxed font-black mb-2 text-left">
+                        Transform from confused creator to profitable business owner
+                    </p>
+                    <p className="inter text-sm sm:text-base md:text-lg italic leading-relaxed">
+                        Stop guessing and start growing with a proven system that&apos;s helped 150+ creators and entrepreneurs build sustainable, profitable businesses powered by content.
+                    </p>
+                </div>
+            </div>
         </motion.section>
     )
 }

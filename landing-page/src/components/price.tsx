@@ -18,13 +18,7 @@ export default function PriceSection() {
 
   ]
 
-  const featuresDoneForYou = [
-    "I’ll write the hooks, scripts, and titles that grab attention",
-    "I’ll manage your designers and editors to produce scroll-stopping content",
-    "I’ll optimize your content systems for consistency and growth",
-    "I’ll set up your offers, sales funnels, tech, and automations",
-    "I’ll oversee execution so you only need to show up, shoot, and focus on clients",
-  ]
+
 
   return (
     <>
@@ -54,18 +48,7 @@ export default function PriceSection() {
         </div>
       </div>
       <section className="relative w-full flex flex-col items-center justify-center px-4 border-t border-green-100 py-10">
-        {/* Background */}
         <div className="absolute inset-0 -z-10 bg-[#141414]" />
-        {/* <div className="absolute inset-0 -z-0 flex items-center justify-center opacity-5">
-          <Image
-            src="/logo7.png"
-            alt="Background Logo"
-            width={800}
-            height={800}
-            className="w-[500px] md:w-[700px] lg:w-[900px] object-cover"
-          />
-        </div> */}
-
         <motion.h2
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -76,9 +59,7 @@ export default function PriceSection() {
           Pricing
         </motion.h2>
 
-        {/* Cards container */}
         <div className="grid grid-cols-1 md:grid-cols-1 gap-10 w-full max-w-xl">
-          {/* --- Card 1: 10X Growth Club --- */}
           <motion.div
             initial={{ opacity: 0, y: 50, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -90,13 +71,13 @@ export default function PriceSection() {
             className="bg-[#0000000d] border border-gray-700 rounded-lg  shadow-2xl cursor-pointer relative overflow-hidden"
           >
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.15),transparent_50%)] pointer-events-none" />
-       <div className="flex items-center justify-center w-full h-[35px] sm:h-[40px] md:h-[45px] bg-[linear-gradient(106deg,#876B40_-4%,#AE9061_6%,#F1DEC0_12%,#FFFAF1_22%,#E1CAA6_36%,#FFFAF1_74%,#AE9061_88%,#6C522A_103%)] rounded-t-lg px-4 text-black">
-  <p className="text-center text-sm sm:text-base md:text-lg uppercase inter  ">
-    <strong>
-      <span className="line-through text-white mr-1 font-medium">15</span>8 spots left
-    </strong>
-  </p>
-</div>
+            <div className="flex items-center justify-center w-full h-[35px] sm:h-[40px] md:h-[45px] bg-[linear-gradient(106deg,#876B40_-4%,#AE9061_6%,#F1DEC0_12%,#FFFAF1_22%,#E1CAA6_36%,#FFFAF1_74%,#AE9061_88%,#6C522A_103%)] rounded-t-lg px-4 text-black">
+              <p className="text-center text-sm sm:text-base md:text-lg uppercase inter  ">
+                <strong>
+                  <span className="line-through text-white mr-1 font-medium">15</span>8 spots left
+                </strong>
+              </p>
+            </div>
 
             <div className="p-6">
               <h3 className="text-xl md:text-2xl font-black mb-6 doner tracking-wider">
@@ -225,7 +206,7 @@ export default function PriceSection() {
         </div>
 
       </section>
-    
+
 
     </>
   )

@@ -66,9 +66,9 @@ const GuideSection: React.FC = () => {
         className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl uppercase tracking-wider doner font-black     pb-10  "
         variants={itemVariants}
       >
-<strong className="bg-gradient-to-r from-[#876B40] via-[#F1DEC0] to-[#6C522A] bg-clip-text text-transparent font-black">
-  10X
-</strong>
+        <strong className="bg-gradient-to-r from-[#876B40] via-[#F1DEC0] to-[#6C522A] bg-clip-text text-transparent font-black">
+          10X
+        </strong>
         GROWTH CLUB
       </motion.h2>
       <motion.p
@@ -80,12 +80,10 @@ const GuideSection: React.FC = () => {
       </motion.p>
 
       <div className="w-full  grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16">
-        {/* Left Column - Problem Section */}
-
         <motion.div
-  className="flex flex-col justify-center items-start text-left space-y-6  h-full"
-  variants={itemVariants}
->
+          className="flex flex-col justify-center items-start text-left space-y-6  h-full"
+          variants={itemVariants}
+        >
           <motion.h3
             className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl doner  tracking-wider font-black mb-6 lg:mb-8 text-left"
             variants={itemVariants}
@@ -108,15 +106,15 @@ const GuideSection: React.FC = () => {
             viewport={{ once: true, amount: 0.3 }}
           >
             <motion.li className=" flex items-start gap-3 " variants={listItemVariants}>
-            <span className="text-[#00e13c] text-sm sm:text-base flex-shrink-0 mt-0.5"><ArrowRightCircle/></span>
+              <span className="text-[#00e13c] text-sm sm:text-base flex-shrink-0 mt-0.5"><ArrowRightCircle /></span>
               Guessing what niche their personal brand should stand for.
             </motion.li>
             <motion.li className=" flex items-start gap-3" variants={listItemVariants}>
-            <span className="text-[#00e13c] text-sm sm:text-base flex-shrink-0 mt-0.5"><ArrowRightCircle/></span>
+              <span className="text-[#00e13c] text-sm sm:text-base flex-shrink-0 mt-0.5"><ArrowRightCircle /></span>
               Guessing what topics will actually attract the right audience.
             </motion.li>
             <motion.li className=" flex items-start gap-3" variants={listItemVariants}>
-            <span className="text-[#00e13c] text-sm sm:text-base flex-shrink-0 mt-0.5"><ArrowRightCircle/></span>
+              <span className="text-[#00e13c] text-sm sm:text-base flex-shrink-0 mt-0.5"><ArrowRightCircle /></span>
               Guessing how to turn that audience into customers and real business revenue.
             </motion.li>
           </motion.ul>
@@ -148,36 +146,36 @@ const GuideSection: React.FC = () => {
             viewport={{ once: true, amount: 0.3 }}
           >
             <motion.li className="flex items-start gap-2 sm:gap-3" variants={listItemVariants}>
-            <span className="text-[#00e13c] text-sm sm:text-base flex-shrink-0 mt-0.5"><ArrowRightCircle/></span>
+              <span className="text-[#00e13c] text-sm sm:text-base flex-shrink-0 mt-0.5"><ArrowRightCircle /></span>
               <span>
                 Build and grow your <strong>YouTube channel & Instagram</strong> with clarity and confidence
               </span>
             </motion.li>
             <motion.li className="flex items-start gap-2 sm:gap-3" variants={listItemVariants}>
-            <span className="text-[#00e13c] text-sm sm:text-base flex-shrink-0 mt-0.5"><ArrowRightCircle/></span>
+              <span className="text-[#00e13c] text-sm sm:text-base flex-shrink-0 mt-0.5"><ArrowRightCircle /></span>
               <span>
                 Create videos people love to watch — and <strong>get more views, consistently</strong>
               </span>
             </motion.li>
             <motion.li className="flex items-start gap-2 sm:gap-3" variants={listItemVariants}>
-            <span className="text-[#00e13c] text-sm sm:text-base flex-shrink-0 mt-0.5"><ArrowRightCircle/></span>
+              <span className="text-[#00e13c] text-sm sm:text-base flex-shrink-0 mt-0.5"><ArrowRightCircle /></span>
               <span>Build content for youtube & instagram in just <strong>2 hours per week</strong></span>
             </motion.li>
             <motion.li className="flex items-start gap-2 sm:gap-3" variants={listItemVariants}>
-            <span className="text-[#00e13c] text-sm sm:text-base flex-shrink-0 mt-0.5"><ArrowRightCircle/></span>
+              <span className="text-[#00e13c] text-sm sm:text-base flex-shrink-0 mt-0.5"><ArrowRightCircle /></span>
               <span>Write <strong>hooks and scripts </strong>like an expert — even if you&apos;re not a writer</span>
             </motion.li>
             <motion.li className="flex items-start gap-2 sm:gap-3" variants={listItemVariants}>
-            <span className="text-[#00e13c] text-sm sm:text-base flex-shrink-0 mt-0.5"><ArrowRightCircle/></span>
+              <span className="text-[#00e13c] text-sm sm:text-base flex-shrink-0 mt-0.5"><ArrowRightCircle /></span>
               <span>
-               Craft irresistible offers and package your services to make <strong>$20K–$350K/month</strong>.
+                Craft irresistible offers and package your services to make <strong>$20K–$350K/month</strong>.
               </span>
             </motion.li>
-           
+
             <motion.li className="flex items-start gap-2 sm:gap-3" variants={listItemVariants}>
-            <span className="text-[#00e13c] text-sm sm:text-base flex-shrink-0 mt-0.5"><ArrowRightCircle/></span>
-            <span>
- Build and <strong>automate funnels</strong> that turn your views into <strong>paid clients. </strong>             </span>
+              <span className="text-[#00e13c] text-sm sm:text-base flex-shrink-0 mt-0.5"><ArrowRightCircle /></span>
+              <span>
+                Build and <strong>automate funnels</strong> that turn your views into <strong>paid clients. </strong>             </span>
             </motion.li>
           </motion.ul>
 

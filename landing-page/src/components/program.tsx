@@ -98,14 +98,9 @@ const ProgramSection: React.FC = ({  }) => {
 
     return (
         <motion.section
-            className={`transition-colors duration-500 px-4 sm:px-6 lg:px-8 text-black xl:px-12 py-10 md:pt-20 w-full bg-[#f8f1f3] text-black"`}
-
-          
-        
-        >
+            className={`transition-colors duration-500 px-4 sm:px-6 lg:px-8 text-black xl:px-12 py-10 md:pt-20 w-full bg-[#f8f1f3] text-black"`}        >
             <motion.h2
-                className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl uppercase tracking-wider doner font-black pb-10"
-               
+                className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl uppercase tracking-wider doner font-black pb-10" 
             >
                 Program Details
             </motion.h2>

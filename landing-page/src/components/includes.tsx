@@ -30,7 +30,7 @@ const IncludeSection: React.FC = () => {
             title: "Complete Audit",
             description: "Of your Youtube & Instagram channel, offers, sales funnel, business.",
         },
-         {
+        {
             title: "Weekly Group Training Calls",
             description: "Level up every week with live group training sessions. Learn proven strategies, master high-impact skills, and plug into ready-to-use templates. Get real-time answers, personalized feedback, and behind-the-scenes insights to fast-track your success.",
         },
@@ -50,9 +50,9 @@ const IncludeSection: React.FC = () => {
         },
         {
             title: "Bonus resources",
-description: <>Done-for-you resources (valued at $1,800): checklists, templates, and AI prompts to help you take action faster and with total clarity.<br/>Plus, a curated list of tools and software to help you run and grow your brand and business — while saving money and scaling smarter.</>
+            description: <>Done-for-you resources (valued at $1,800): checklists, templates, and AI prompts to help you take action faster and with total clarity.<br />Plus, a curated list of tools and software to help you run and grow your brand and business — while saving money and scaling smarter.</>
         },
-     
+
 
     ];
 
@@ -71,22 +71,17 @@ description: <>Done-for-you resources (valued at $1,800): checklists, templates,
                 transition={{ duration: 0.6, delay: 0.6 }}
             >
                 What&apos;s Included
-
-
             </motion.h2>
             <motion.p
                 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl  text-black  tracking-wider opacity-90 doner leading-relaxed      font-black mb-4 lg:mb-6 text-left"
                 variants={itemVariants}
             >
                 Everything you need to build a complete growth system that turns views into premium clients
-
             </motion.p>
             <motion.div
                 className="flex  items-start max-w-7xl mx-auto"
                 variants={containerVariants}
             >
-                {/* Left Column: Subheading */}
-
                 <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start" variants={containerVariants}>
                     {features.map((feature, index) => (
                         <motion.div
@@ -105,13 +100,12 @@ description: <>Done-for-you resources (valued at $1,800): checklists, templates,
                             <p className={`
                             inter text-sm sm:text-base md:text-lg lg:text-xl 
                             leading-relaxed
-                      text-gray-700"
+                            text-gray-700"
                         `}>{feature.description}</p>
                         </motion.div>
                     ))}
                 </motion.div>
             </motion.div>
-
         </motion.section>
     );
 };
