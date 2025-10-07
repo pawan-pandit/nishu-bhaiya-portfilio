@@ -42,7 +42,7 @@ const images = [
  "nolan2.jpg",
  
   "review4.png",
-  "review13.jpeg",
+  "review13.png",
   "review8.jpg",
   "review9.jpg",
   {

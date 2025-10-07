@@ -31,8 +31,10 @@ const HeroSection: React.FC = () => {
   ]
 
   return (
-    <header
-      className={`transition-colors duration-500 bg-[#f8f1f3] text-black"
+
+    <>
+     <header
+      className={`fixed top-0 left-0 w-full z-50 transition-colors duration-500 bg-[#f8f1f3] text-black"
         `}
     >
       <div className="w-full bg-black overflow-hidden">
@@ -62,7 +64,7 @@ const HeroSection: React.FC = () => {
 
       <nav className="flex items-center justify-between px-4 sm:px-6 lg:px-10   mx-auto inter ">
         <div className="relative flex items-center">
-          <img src="/logo7.png" alt="10xGrowth Logo" className="h-20 w-20 sm:h-40 sm:w-40 bg-[#f8f1f3]" />
+          <img src="/logo7.png" alt="10xGrowth Logo" className="h-20 w-20  bg-[#f8f1f3]" />
         </div>
 
         <div className="hidden lg:flex items-center gap-6 xl:gap-8 doner">
@@ -138,8 +140,10 @@ const HeroSection: React.FC = () => {
       </AnimatePresence>
 
 
-      <motion.section
-        className="relative overflow-hidden px-4 sm:px-6 lg:px-10 pb-10 mt-2   mx-auto   inter"
+     
+    </header>
+     <motion.section
+        className="relative overflow-hidden px-4 sm:px-6 lg:px-10 pb-10  mt-[180px]  mx-auto   inter"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.4 }}
@@ -230,8 +234,8 @@ const HeroSection: React.FC = () => {
             </div>
           </motion.div>
         </div>
-      </motion.section>
-    </header>
+      </motion.section></>
+   
   )
 }
 
