@@ -8,95 +8,95 @@ const ProgramSection: React.FC = () => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-   const projects = [
-        {
-            icon: "",
-            title: "Foundation & Clarity",
-            subtitle: "",
-            description:
-                "We start by building the right foundation. Without clarity, everything else falls apart.",
-            point: [
-                "1:1 Strategy Calls: Bi-weekly private sessions with personalized roadmap",
-                "10x Productivity Blueprint — Simple system to 10x your growth",
-                "Niche & Audience Clarity - Get crystal clear on your ideal audience",
-                "Create content in just 2 hours per week",
-                "Content Repurposing System - Turn 1 video into multiples posts and content",
-                "Channel Positioning"
-            ],
-            outcome: "Get clear on your niche, audience, and brand. Learn to make 1 YouTube video and 4 Instagram videos in 2 hours a week—and repurpose them into posts and emails to stay consistent without stress.",
+  const projects = [
+    {
+      icon: "",
+      title: "Foundation & Clarity",
+      subtitle: "",
+      description:
+        "We start by building the right foundation. Without clarity, everything else falls apart.",
+      point: [
+        "1:1 Strategy Calls: Bi-weekly private sessions with personalized roadmap",
+        "10x Productivity Blueprint — Simple system to 10x your growth",
+        "Niche & Audience Clarity - Get crystal clear on your ideal audience",
+        "Create content in just 2 hours per week",
+        "Content Repurposing System - Turn 1 video into multiples posts and content",
+        "Channel Positioning"
+      ],
+      outcome: "Get clear on your niche, audience, and brand. Learn to make 1 YouTube video and 4 Instagram videos in 2 hours a week—and repurpose them into posts and emails to stay consistent without stress.",
 
-            color: "#BBACAF",
-        },
-        {
-            icon: "",
-            title: "Growth Engines",
-            subtitle: "Create Content That Gets Clicks & Keeps Viewers Watching",
-            description:
-                "",
-            point: [
-                "Proven Rules for Thumbnails That Get Clicked",
+      color: "#BBACAF",
+    },
+    {
+      icon: "",
+      title: "Growth Engines",
+      subtitle: "Create Content That Gets Clicks & Keeps Viewers Watching",
+      description:
+        "",
+      point: [
+        "Proven Rules for Thumbnails That Get Clicked",
 
-                "AI Thumbnails Made Simple",
-                "How to Create Hooks People Can't Ignore",
-                "The Script Analysis Method for Maximum Views",
-                "Winning Script Frameworks Built to Hook & Hold Attention",
+        "AI Thumbnails Made Simple",
+        "How to Create Hooks People Can't Ignore",
+        "The Script Analysis Method for Maximum Views",
+        "Winning Script Frameworks Built to Hook & Hold Attention",
 
-                "How to Write Scripts & Story Formulas That Always Hook Viewers"
+        "How to Write Scripts & Story Formulas That Always Hook Viewers"
 
-            ],
-            outcome: "Learn to create thumbnails that grab attention and write hooks, scripts, and stories that keep viewers watching.",
-            color: "#BBACAF",
-        },
-        {
-            icon: "",
-            title: "Execution & Scaling",
-            subtitle: "",
-            description:
-                "Most creators waste 5x more time than needed because their process is messy. I'll fix that.",
-            point: [
-                "The Secret Formula to Planning Videos That Perform",
-                "Visual Storytelling That Gets Views",
-                "The Filming Prep Checklist",
-                "The Repurposing Workflow - 1 video = multiple platforms",
-            ],
-            outcome: "Streamlined system to plan, film, and publish consistently without stress or wasted effort.",
-            color: "#BBACAF",
-        },
-        {
-            icon: "",
-            title: "Offer & Pricing Mastery",
-            subtitle: "",
-            description:
-                "Views are great, but money pays the bills. Learn how to turn your audience into consistent revenue.",
-            point: [
-                "How to Make Money With YouTube & Instagram",
-                "How to Create an Irresistible Offer Your Audience Can't Refuse",
-                "Pricing Strategies That Work: Low-ticket to high-ticket",
-                "Market Analysis: Uncover What Your Audience Truly Wants to Buy",
-            ],
-            outcome: "A clear offer and pricing strategy for both low and high-ticket programs—built to attract your audience and turn viewers into loyal customers.",
+      ],
+      outcome: "Learn to create thumbnails that grab attention and write hooks, scripts, and stories that keep viewers watching.",
+      color: "#BBACAF",
+    },
+    {
+      icon: "",
+      title: "Execution & Scaling",
+      subtitle: "",
+      description:
+        "Most creators waste 5x more time than needed because their process is messy. I'll fix that.",
+      point: [
+        "The Secret Formula to Planning Videos That Perform",
+        "Visual Storytelling That Gets Views",
+        "The Filming Prep Checklist",
+        "The Repurposing Workflow - 1 video = multiple platforms",
+      ],
+      outcome: "Streamlined system to plan, film, and publish consistently without stress or wasted effort.",
+      color: "#BBACAF",
+    },
+    {
+      icon: "",
+      title: "Offer & Pricing Mastery",
+      subtitle: "",
+      description:
+        "Views are great, but money pays the bills. Learn how to turn your audience into consistent revenue.",
+      point: [
+        "How to Make Money With YouTube & Instagram",
+        "How to Create an Irresistible Offer Your Audience Can't Refuse",
+        "Pricing Strategies That Work: Low-ticket to high-ticket",
+        "Market Analysis: Uncover What Your Audience Truly Wants to Buy",
+      ],
+      outcome: "A clear offer and pricing strategy for both low and high-ticket programs—built to attract your audience and turn viewers into loyal customers.",
 
-            color: "#BBACAF",
-        },
-        {
-            icon: "",
-            title: "The Funnel System",
-            subtitle: "Turn views into sales on autopilot",
-            description:
-                "",
-            point: [
-                "High-Converting Sales Pages - Copy + design secrets",
-                "YouTube & Instagram Sales Funnel Step-by-step",
-                "Video Sales Letters (VSLs) - Sell directly through YouTube",
-                "Complete Email Marketing System - Nurture & convert automatically",
-                "Lead Magnet System - Build your list while you sleep",
-                "Launch Systems for low-ticket & high-ticket products",
-                "Discover the best tools to save time & money to grow your personal brand efficiently."
-            ],
-            outcome: "A repeatable sales system built around your content—where every video feeds your YouTube, Instagram, and email funnels to grow your business.",
-            color: "#BBACAF",
-        },
-    ];
+      color: "#BBACAF",
+    },
+    {
+      icon: "",
+      title: "The Funnel System",
+      subtitle: "Turn views into sales on autopilot",
+      description:
+        "",
+      point: [
+        "High-Converting Sales Pages - Copy + design secrets",
+        "YouTube & Instagram Sales Funnel Step-by-step",
+        "Video Sales Letters (VSLs) - Sell directly through YouTube",
+        "Complete Email Marketing System - Nurture & convert automatically",
+        "Lead Magnet System - Build your list while you sleep",
+        "Launch Systems for low-ticket & high-ticket products",
+        "Discover the best tools to save time & money to grow your personal brand efficiently."
+      ],
+      outcome: "A repeatable sales system built around your content—where every video feeds your YouTube, Instagram, and email funnels to grow your business.",
+      color: "#BBACAF",
+    },
+  ];
 
   return (
     <motion.section
@@ -115,29 +115,28 @@ const ProgramSection: React.FC = () => {
             key={index}
             className="bg-white rounded-lg p-6 transition-shadow cursor-pointer mb-6"
           >
-<div
-  onClick={() => toggleDropdown(index)}
-  className="flex flex-col sm:flex-row sm:justify-between sm:items-center cursor-pointer group py-3"
->
-  <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl  inter tracking-wider font-semibold text-left text-green-600 group-hover:underline decoration-green-600">
-    Phase {index + 1}: {project.title}
-  </h2>
+            <div
+              onClick={() => toggleDropdown(index)}
+              className="flex flex-col sm:flex-row sm:justify-between sm:items-center cursor-pointer group py-3"
+            >
+              <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl  inter tracking-wider font-semibold text-left text-green-600 group-hover:underline decoration-green-600">
+                Phase {index + 1}: {project.title}
+              </h2>
 
-  {/* Right “More details” + pulsing arrow */}
-  <motion.p className="flex items-center inter font-semibold gap-2 text-sm sm:text-base md:text-lg text-gray-700 inter mt-2 sm:mt-0 justify-start sm:justify-end">
-    More details
-    <motion.span
-      animate={{ rotate: openIndex === index ? 180 : 0 }}
-      transition={{ duration: 0.9 }}
-      className="relative text-sm sm:text-lg text-green-500"
-    >
-      ▼
-      <span className="absolute inset-0 animate-ping rounded-full text-amber-500 opacity-60">
-        ▼
-      </span>
-    </motion.span>
-  </motion.p>
-</div>
+              <motion.p className="flex items-center inter font-semibold gap-2 text-sm sm:text-base md:text-lg text-gray-700 inter  mt-2 sm:mt-0 justify-start sm:justify-end">
+                More details..
+                <motion.span
+                  animate={{ rotate: openIndex === index ? 180 : 0 }}
+                  transition={{ duration: 0.9 }}
+                  className="relative text-sm sm:text-lg text-black"
+                >
+                  ▼
+                  <span className="absolute inset-0 animate-bounce rounded-full text-green-500 opacity-100">
+                    ▼
+                  </span>
+                </motion.span>
+              </motion.p>
+            </div>
 
 
 

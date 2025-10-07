@@ -205,7 +205,7 @@ const HeroSection: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.0 }}>
-            <div className="flex max-w-2xl items-center justify-center ">
+            <div className="flex max-w-3xl items-center justify-center ">
               <div className="flex items-center gap-0 sm:gap-6 py-6">
                 <img
                   src="/nolan.jpg"
@@ -217,15 +217,13 @@ const HeroSection: React.FC = () => {
                   decoding="async"
                 />
                 <div className="flex flex-col ">
-                  <blockquote className="relative max-w-2xl mx-auto p-4 sm:p-6   ">
+                  <blockquote className="relative max-w-3xl mx-auto p-4 sm:p-6   ">
                     <p className="text-sm sm:text-lg leading-relaxed inter font-semibold text-black">
-                      <Quote className="inline-block w-3 h-3 sm:w-5 sm:h-5 mr-1 text-gray-950 -translate-y-2 rotate-180" />
-                      Alejandro helped me launch my first program…
-                      I made $120,465
-                      and am officially debt free
-                      <Quote className="inline-block w-3 h-3 sm:w-5 sm:h-5 ml-1 text-gray-950 -translate-y-2" />
+                      <Quote className="inline-block w-3 h-3 sm:w-4 sm:h-4 mr-1 text-gray-950 -translate-y-2 rotate-180" />
+                     As my ex-business partner, Vivek helped me scale past $350K+. He&apos;s brilliant in helping creators turn social media attention into real business growth, whether it&apos;s creating offers, building programs & funnels, or strengthening their personal brand.
+                      <Quote className="inline-block w-3 h-3 sm:w-4 sm:h-4 ml-1 text-gray-950 -translate-y-2" />
                     </p>
-                    <p className=" inter text-sm sm:text-lg py-2">Nolan Molt</p>
+                    <p className=" inter text-sm sm:text-lg py-2 text-green-600 font-semibold">Nolan Molt</p>
                   </blockquote>
                 </div>
               </div>

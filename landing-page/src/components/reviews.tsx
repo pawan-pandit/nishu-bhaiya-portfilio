@@ -14,33 +14,36 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: "1",
-    name: "Tom Noske",
-    title: "Online University",
-    achievement: "Tom recently made his first $100K in sales.",
+    name: "Bella",
+    title: "Relationship coach",
+    achievement: " From Confused to 30K: Bella’s YouTube Breakthrough",
     videoUrl: "/ena.mp4",
   },
   {
     id: "2",
-    name: "Pat Basil",
-    title: "Online University",
-    achievement: "Pat currently makes $10,000 to $20,000 monthly.",
+    name: "Elena",
+    title: "Fitness coach",
+    achievement: "Elena’s Journey: From 450 Subs to 53K and $75K/Month",
     videoUrl: "vedio2.mp4",
   },
   {
     id: "3",
-    name: "Alex Feinberg",
-    title: "Online University",
-    achievement: "Alex made $12K using one of my strategies.",
+    name: "Ron",
+    title: "Agency owner",
+    achievement: " Ron: From no clarity to 100K Subs — and $150K.",
     videoUrl: "vedio3.mp4",
   },
 ]
 
 const images = [
-  "review2.png",
-  "review5.jpg",
-  "review3.png",
   "review4.png",
-  "review1.png",
+  "review7.jpg",
+  "review8.jpg",
+  "review9.jpg",
+  {
+    img: "review6.jpg",
+    text: "Julia turned a small online presence into a $20K/month brand — in just one month."
+  },
 ]
 
 function toVimeoBackground(url: string) {
@@ -71,7 +74,6 @@ export default function VideoTestimonials() {
   return (
     <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12 py-10 md:py-20">
       <div className="mx-auto max-w-full">
-        {/* --- Heading --- */}
         <motion.h2
           className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl uppercase tracking-wider doner font-black mb-6"
           initial={{ opacity: 0, y: 20 }}
@@ -91,7 +93,7 @@ export default function VideoTestimonials() {
                 <h3 className="text-sm sm:text-base md:text-lg lg:text-xl inter text-white font-semibold opacity-90 leading-relaxed text-left">
                   {t.achievement}
                 </h3>
-                <p className="mt-1 text-xs opacity-80 text-white/80 inter">
+                <p className="mt-1 text-xs opacity-80  text-green-500   inter font-semibold">
                   {t.name} — {t.title}
                 </p>
               </div>
@@ -129,27 +131,29 @@ export default function VideoTestimonials() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <motion.h3
-            className="text-2xl md:text-4xl font-black uppercase tracking-wider doner mb-8"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
-          >
-            Reviews
-          </motion.h3>
-
           <div className="columns-1 sm:columns-2 gap-4 mx-auto max-w-7xl">
-            {images.map((imageUrl, idx) => (
-              <BlurFade key={imageUrl} delay={0.25 + idx * 0.05} inView>
-                <img
-                  className="mb-4 w-full rounded-lg object-cover hover:scale-105 transition-transform duration-300"
-                  src={imageUrl}
-                  alt={`Review ${idx + 1}`}
-                />
-              </BlurFade>
-            ))}
+            {images.map((item, idx) => {
+              const imageUrl = typeof item === "string" ? item : item.img
+              const caption = typeof item === "object" && item.text ? item.text : null
+
+              return (
+                <BlurFade key={imageUrl} delay={0.25 + idx * 0.05} inView>
+                  <div className="mb-4 w-full">
+                    <img
+                      className="w-full rounded-lg object-cover hover:scale-105 transition-transform duration-300"
+                      src={imageUrl}
+                      alt={`Review ${idx + 1}`}
+                    />
+                    {caption && (
+                      <p className="mt-2 text-sm sm:text-lg text-gray-700 font-bold">{caption}</p>
+                    )}
+                  </div>
+                </BlurFade>
+              )
+            })}
           </div>
         </motion.section>
+
       </div>
     </div>
   )
