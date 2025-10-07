@@ -82,9 +82,9 @@ const HeroSection: React.FC = () => {
   10XGrowth Club
 </h1> */}
  <img
-                src="/logo7.png"
+                src="/logo.png"
                 alt="10xGrowth Logo"
-                className="h-20 w-20 bg-[#f8f1f3]"
+                className="h-10 w-10 bg-[#f8f1f3]"
               />
             </div>
 
@@ -104,9 +104,9 @@ const HeroSection: React.FC = () => {
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="lg:hidden archivo tracking-wider bg-[#00e13c] text-white hover:bg-green-600 px-4 py-2 text-center hover:border-green-400 my-4"
+                className="lg:hidden archivo text-sm tracking-wider bg-[#00e13c] text-white hover:bg-green-600 px-2 py-1 text-center hover:border-green-400 my-3"
               >
-                Claim Your Spot
+              Claim Your Offer
               </motion.div>
               <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
