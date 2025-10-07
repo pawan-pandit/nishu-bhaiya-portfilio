@@ -115,21 +115,32 @@ const ProgramSection: React.FC = () => {
             key={index}
             className="bg-white rounded-lg p-6 transition-shadow cursor-pointer mb-6"
           >
-            <div
-              onClick={() => toggleDropdown(index)}
-  className="flex justify-between items-center cursor-pointer group"
-            >
-  <h2 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl inter tracking-wider font-black text-left text-green-600 group-hover:underline decoration-green-600">
-                Phase {index + 1}: {project.title}
-              </h2>
-              <motion.span
-                animate={{ rotate: openIndex === index ? 180 : 0 }}
-                transition={{ duration: 0.3 }}
-                className="text-2xl text-gray-700 "
-              >
-                ▼
-              </motion.span>
-            </div>
+<div
+  onClick={() => toggleDropdown(index)}
+  className="flex flex-col sm:flex-row sm:justify-between sm:items-center cursor-pointer group py-3"
+>
+  <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl  inter tracking-wider font-semibold text-left text-green-600 group-hover:underline decoration-green-600">
+    Phase {index + 1}: {project.title}
+  </h2>
+
+  {/* Right “More details” + pulsing arrow */}
+  <motion.p className="flex items-center inter font-semibold gap-2 text-sm sm:text-base md:text-lg text-gray-700 inter mt-2 sm:mt-0 justify-start sm:justify-end">
+    More details
+    <motion.span
+      animate={{ rotate: openIndex === index ? 180 : 0 }}
+      transition={{ duration: 0.9 }}
+      className="relative text-sm sm:text-lg text-green-500"
+    >
+      ▼
+      <span className="absolute inset-0 animate-ping rounded-full text-amber-500 opacity-60">
+        ▼
+      </span>
+    </motion.span>
+  </motion.p>
+</div>
+
+
+
 
             <AnimatePresence>
               {openIndex === index && (
