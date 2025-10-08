@@ -64,7 +64,7 @@ const IncludeSection: React.FC = () => {
   return (
     <section className="transition-colors duration-500 px-4 sm:px-6 lg:px-8 xl:px-12 py-10 md:py-20 w-full">
       <h2 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl text-black uppercase tracking-wider doner font-black pb-10">
-        What's Included
+        What&apos;s Included
       </h2>
       <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-black tracking-wider opacity-90 doner leading-relaxed font-black mb-4 lg:mb-6 text-left">
         Everything you need to build a complete growth system that turns views into premium clients
