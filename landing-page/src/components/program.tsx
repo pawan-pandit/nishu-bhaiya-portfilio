@@ -119,7 +119,10 @@ const ProgramSection: React.FC = () => {
               onClick={() => toggleDropdown(index)}
               className="flex flex-col sm:flex-row sm:justify-between sm:items-center cursor-pointer group py-3"
             >
-              <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl  inter tracking-wider font-semibold text-left text-green-600 group-hover:underline decoration-green-600">
+              <h2
+                className={`text-base sm:text-lg md:text-xl lg:text-2xl inter tracking-wider font-semibold text-left ${openIndex === index ? "underline decoration-green-600" : ""
+                  } text-green-600`}
+              >
                 Phase {index + 1}: {project.title}
               </h2>
 

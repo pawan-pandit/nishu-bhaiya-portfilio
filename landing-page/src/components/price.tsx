@@ -116,16 +116,13 @@ export default function PriceSection() {
               </div>
 
               <motion.div
-                initial={{ scale: 0.8, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ delay: 1, type: "spring", stiffness: 200 }}
-                className="block  tracking-wider  w-full text-center px-6 py-3 rounded-md border border-green-600 text-blue-600 font-medium  
-              transition-all duration-300 ease-in-out transform hover:scale-105 hover:backdrop-blur-md"
-              >
+               
+  className="block tracking-wider w-full text-center px-6 py-3 rounded-md border-2 border-dashed border-green-600 text-blue-600 font-medium"
+          >
                 <p className=" text-2xl md:text-3xl  mb-2">
                   <span className="line-through text-gray-400 mr-2 text-2xl md:text-3xl inter">$950</span> <span className="inter font-bold " > $280 </span> <span className="text-gray-400 text-base ">/month</span>
                 </p>
-                <p className="mt-2 text-sm font-semibold">
+                <p className="mt-2 text-sm font-semibold text-gray-600">
                   ⚡ Price increases soon — lock in the lowest it’ll ever be
                 </p>
               </motion.div>
@@ -135,7 +132,7 @@ export default function PriceSection() {
               <div className="w-full mt-4">
                 <Link
                   href="https://forms.gle/nqDF4TBXLnRYuuFRA"
-                  className="block archivo tracking-wider w-full bg-[#00e13c] text-center px-6 py-3 rounded-md border border-green-600 text-black font-medium uppercase 
+                  className="block archivo tracking-wider w-full bg-[#00e13c] text-center px-6 py-3 rounded-md border border-green-600 text-white font-medium uppercase 
                 transition-all duration-300 ease-in-out transform hover:scale-105 hover:backdrop-blur-md "
                 >
                   claim your spot

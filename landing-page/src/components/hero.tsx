@@ -183,7 +183,7 @@ const HeroSection: React.FC = () => {
 
       {/* Hero Section */}
       <motion.section
-        className="relative overflow-hidden px-4 sm:px-6 lg:px-10 pb-10 mt-[100px] mx-auto inter"
+        className="relative overflow-hidden px-4 sm:px-6 lg:px-10 pb-10 mt-[50px] mx-auto inter"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.4 }}
