@@ -54,14 +54,14 @@ export default function PriceSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl uppercase tracking-wider doner font-black pb-10"
+          className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl uppercase tracking-wider doner font-black pb-4 md:pb-10"
         >
           Pricing
         </motion.h2>
 
 
 
-        <div className="mt-4 rounded-full bg-muted px-4 py-2 text-center text-xs font-semibold text-muted-foreground bg-[#00e13c] text-white md:text-sm mb-6">
+        <div className="mt-4 rounded-full bg-muted px-4 py-2 text-center text-xs font-semibold text-muted-foreground bg-gray-950 text-white md:text-sm mb-6">
           In 12 weeks: grow your personal brand, craft your offer, monetize your funnel
         </div>
 

@@ -12,13 +12,16 @@ const HeroSection: React.FC = () => {
   const [isSticky, setIsSticky] = useState(false)
   const navbarRef = useRef<HTMLDivElement>(null)
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" })
-      setIsMobileMenuOpen(false)
-    }
+ const scrollToSection = (sectionId: string) => {
+  const element = document.getElementById(sectionId)
+  if (element) {
+    const navbarHeight = navbarRef.current?.offsetHeight || 100
+    const y = element.getBoundingClientRect().top + window.scrollY - navbarHeight
+    window.scrollTo({ top: y, behavior: "smooth" })
+    setIsMobileMenuOpen(false)
   }
+}
+
 
   const navItems = [
     { label: "About me", href: "about" },
@@ -72,16 +75,13 @@ const HeroSection: React.FC = () => {
         {/* Navbar (becomes fixed when scrolled) */}
         <div
           ref={navbarRef}
-          className={`${
-            isSticky ? "fixed top-0  left-0 w-full shadow-md z-50" : "relative"
-          } bg-[#f8f1f3] transition-all duration-300`}
+          className={`${isSticky ? "fixed top-0  left-0 w-full shadow-md z-50" : "relative"
+            } bg-[#f8f1f3] transition-all duration-300`}
         >
           <nav className="flex items-center justify-between px-4 sm:px-6 lg:px-10 mx-auto inter">
             <div className="relative flex items-center">
-{/* <h1 className="bg-gradient-to-r from-[#FFD700] via-[#FFC107] to-[#FF8C00] bg-clip-text text-transparent font-black text-xl">
-  10XGrowth Club
-</h1> */}
- <img
+
+              <img
                 src="/logo.png"
                 alt="10xGrowth Logo"
                 className="h-10 w-10 bg-[#f8f1f3]"
@@ -100,27 +100,28 @@ const HeroSection: React.FC = () => {
               ))}
             </div>
 
-          <div className="flex">
-              <motion.div
+            <div className="flex">
+              <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                  onClick={() => scrollToSection("pricing")}
                 className="lg:hidden archivo text-sm tracking-wider bg-[#00e13c] text-white hover:bg-green-600 px-2 py-1 text-center hover:border-green-400 my-3"
               >
-              Claim Your Offer
-              </motion.div>
+                Claim Your Offer
+              </motion.button>
               <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-2 hover:bg-gray-200 rounded-md transition-colors z-50"
-              aria-label="Toggle menu"
-            >
-              {isMobileMenuOpen ? (
-                <X className="w-6 h-6" />
-              ) : (
-                <Menu className="w-6 h-6" />
-              )}
-            </button>
-           
-          </div>
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="lg:hidden p-2 hover:bg-gray-200 rounded-md transition-colors z-50"
+                aria-label="Toggle menu"
+              >
+                {isMobileMenuOpen ? (
+                  <X className="w-6 h-6" />
+                ) : (
+                  <Menu className="w-6 h-6" />
+                )}
+              </button>
+
+            </div>
 
             <motion.div
               className="hidden lg:block"
@@ -128,13 +129,15 @@ const HeroSection: React.FC = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="archivo tracking-wider bg-[#00e13c] text-white hover:bg-green-600 px-4 py-2 text-center hover:border-green-400 my-4"
-              >
-                Claim Your Spot
-              </motion.div>
+            <motion.button
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+  onClick={() => scrollToSection("pricing")}
+  className="archivo tracking-wider bg-[#00e13c] text-white hover:bg-green-600 px-4 py-2 text-center hover:border-green-400 my-4"
+>
+  Claim Your Spot
+</motion.button>
+
             </motion.div>
           </nav>
         </div>
@@ -162,14 +165,16 @@ const HeroSection: React.FC = () => {
                     {item.label}
                   </motion.button>
                 ))}
-                <motion.div
+                <motion.button
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: navItems.length * 0.1 }}
+                                    onClick={() => scrollToSection("pricing")}
+
                   className="archivo tracking-wider bg-[#00e13c] text-white hover:bg-green-600 px-4 py-2 text-center hover:border-green-400"
                 >
                   Claim Your Spot
-                </motion.div>
+                </motion.button>
               </div>
             </motion.div>
           )}

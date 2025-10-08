@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import { BlurFade } from "./ui/photogrid"
+import { VideoWithThumbnail } from "./ui/vedio-reviews"
 
 interface Testimonial {
   id: string
@@ -9,6 +10,7 @@ interface Testimonial {
   title: string
   achievement: string
   videoUrl: string
+  tumbnail: string
 }
 
 const testimonials: Testimonial[] = [
@@ -18,6 +20,8 @@ const testimonials: Testimonial[] = [
     title: "Relationship coach",
     achievement: " From Confused to 30K: Bella’s YouTube Breakthrough",
     videoUrl: "/ena.mp4",
+    tumbnail: "enaa.png"
+
   },
   {
     id: "2",
@@ -25,6 +29,7 @@ const testimonials: Testimonial[] = [
     title: "Fitness coach",
     achievement: "Elena’s Journey: From 450 Subs to 53K and $75K/Month",
     videoUrl: "vedio2.mp4",
+    tumbnail: "tumbnail2.png"
   },
   {
     id: "3",
@@ -32,15 +37,14 @@ const testimonials: Testimonial[] = [
     title: "Agency owner",
     achievement: " Ron: From no clarity to 100K Subs — and $150K.",
     videoUrl: "vedio3.mp4",
+    tumbnail: "tumbnail3.png"
+
   },
 ]
 
 const images = [
-
- 
- "nolan1.png",
- "nolan2.jpg",
- 
+  "nolan1.png",
+  "nolan2.jpg",
   "review4.png",
   "review13.png",
   "review8.jpg",
@@ -98,76 +102,74 @@ export default function VideoTestimonials() {
                 <h3 className="text-sm sm:text-base md:text-lg lg:text-xl inter text-white font-semibold opacity-90 leading-relaxed text-left">
                   {t.achievement}
                 </h3>
-                <p className="mt-1 text-xs opacity-80  text-green-500   inter font-semibold">
-                  {t.name} — {t.title}
+                <p className="mt-1 text-xs opacity-80  text-gray-200   inter font-semibold">
+                  {t.title}
                 </p>
               </div>
 
               <div className="px-4 pb-6">
-                <div className="relative w-full aspect-[9/14] rounded-2xl border-2 border-b-blue-500 overflow-hidden bg-black">
-                  {isMp4(t.videoUrl) ? (
-                    <video
-                      className="absolute inset-0 h-full w-full object-cover"
-                      src={t.videoUrl}
-                      controls
-                      playsInline
-                      aria-label={`${t.name} video testimonial`}
-                    />
-                  ) : (
-                    <iframe
-                      className="absolute inset-0 h-full w-full object-cover"
-                      src={toVimeoBackground(t.videoUrl)}
-                      title={`${t.name} Video Testimonial`}
-                      allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; gyroscope"
-                      referrerPolicy="no-referrer-when-downgrade"
-                    />
-                  )}
+                <div className="relative w-full aspect-[9/14] rounded-2xl border-2 border-b-green-500 overflow-hidden bg-black">
+                 {isMp4(t.videoUrl) ? (
+  <VideoWithThumbnail
+    videoUrl={t.videoUrl}
+    thumbnail={t.tumbnail}
+    name={t.name}
+  />
+) : (
+  <iframe
+    className="absolute inset-0 h-full w-full object-cover"
+    src={toVimeoBackground(t.videoUrl)}
+    title={`${t.name} Video Testimonial`}
+    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; gyroscope"
+    referrerPolicy="no-referrer-when-downgrade"
+  />
+)}
+
                 </div>
               </div>
             </div>
           ))}
         </div>
 
-     <motion.section
-  id="photos"
-  className="mt-20"
-  initial={{ opacity: 0, y: 30 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.6 }}
-  viewport={{ once: true }}
->
-  <div className="columns-1 sm:columns-2 gap-4 mx-auto max-w-7xl">
-   {images.map((item, idx) => {
-  const imageUrl = typeof item === "string" ? item : item.img
-  const caption = typeof item === "object" && item.text ? item.text : null
+        <motion.section
+          id="photos"
+          className="mt-20"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <div className="columns-1 sm:columns-2 gap-4 mx-auto max-w-7xl">
+            {images.map((item, idx) => {
+              const imageUrl = typeof item === "string" ? item : item.img
+              const caption = typeof item === "object" && item.text ? item.text : null
 
-  const isEmailScreenshot = imageUrl.includes("nolan") // or check for other email files if needed
+              const isEmailScreenshot = imageUrl.includes("nolan") // or check for other email files if needed
 
-  return (
-    <BlurFade key={imageUrl} delay={0.25 + idx * 0.05} inView>
-      <div className=" w-full flex flex-col items-center">
-        <img
-          className={`w-full rounded-lg hover:scale-105 transition-transform duration-300 ${
-            isEmailScreenshot
-              ? "object-contain max-h-[400px] "
-              : "object-cover max-h-[550px]"
-          }`}
-          src={imageUrl}
-          alt={`Review ${idx + 1}`}
-        />
-        {caption && (
-          <p className="mt-2 text-sm sm:text-lg text-gray-700 font-bold text-center">
-            {caption}
-          </p>
-        )}
-       
-      </div>
-    </BlurFade>
-  )
-})}
+              return (
+                <BlurFade key={imageUrl} delay={0.25 + idx * 0.05} inView>
+                  <div className=" w-full flex flex-col items-center">
+                    <img
+                      className={`w-full rounded-lg hover:scale-105 transition-transform duration-300 ${isEmailScreenshot
+                          ? "object-contain max-h-[400px] "
+                          : "object-cover max-h-[550px]"
+                        }`}
+                      src={imageUrl}
+                      alt={`Review ${idx + 1}`}
+                    />
+                    {caption && (
+                      <p className="mt-2 text-sm sm:text-lg text-gray-700 font-bold text-center">
+                        {caption}
+                      </p>
+                    )}
 
-  </div>
-</motion.section>
+                  </div>
+                </BlurFade>
+              )
+            })}
+
+          </div>
+        </motion.section>
 
 
       </div>
