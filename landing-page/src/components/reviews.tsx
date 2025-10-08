@@ -1,6 +1,5 @@
 "use client"
-import { motion } from "framer-motion"
-import { BlurFade } from "./ui/photogrid"
+
 import { VideoWithThumbnail } from "./ui/vedio-reviews"
 
 interface Testimonial {
@@ -77,7 +76,7 @@ export default function VideoTestimonials() {
   return (
     <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12 py-10 md:py-20">
       <div className="mx-auto max-w-full">
-        {/* Heading appears instantly */}
+        {/* Heading */}
         <h2 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl uppercase tracking-wider doner font-black mb-6">
           Success Stories
         </h2>
@@ -85,12 +84,8 @@ export default function VideoTestimonials() {
         {/* Testimonial videos/cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mx-auto max-w-7xl">
           {testimonials.map((t) => (
-            <motion.div
+            <div
               key={t.id}
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.1 }}
-              transition={{ duration: 0.3 }}
               className="flex flex-col rounded-3xl overflow-hidden shadow-xl bg-gray-950 text-primary-foreground px-6 sm:px-8"
             >
               <div className="px-6 py-4">
@@ -115,7 +110,7 @@ export default function VideoTestimonials() {
                   )}
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
@@ -128,20 +123,18 @@ export default function VideoTestimonials() {
               const isEmailScreenshot = imageUrl.includes("nolan")
 
               return (
-                <BlurFade key={imageUrl} delay={0.05 + idx * 0.02} inView>
-                  <div className="w-full flex flex-col items-center">
-                    <img
-                      className={`w-full rounded-lg hover:scale-105 transition-transform duration-300 ${
-                        isEmailScreenshot ? "object-contain max-h-[400px]" : "object-cover max-h-[550px]"
-                      }`}
-                      src={imageUrl}
-                      alt={`Review ${idx + 1}`}
-                    />
-                    {caption && (
-                      <p className="mt-2 text-sm sm:text-lg text-gray-700 font-bold text-center">{caption}</p>
-                    )}
-                  </div>
-                </BlurFade>
+                <div key={imageUrl} className="w-full flex flex-col items-center">
+                  <img
+                    className={`w-full rounded-lg ${
+                      isEmailScreenshot ? "object-contain max-h-[400px]" : "object-cover max-h-[550px]"
+                    }`}
+                    src={imageUrl}
+                    alt={`Review ${idx + 1}`}
+                  />
+                  {caption && (
+                    <p className="mt-2 text-sm sm:text-lg text-gray-700 font-bold text-center">{caption}</p>
+                  )}
+                </div>
               )
             })}
           </div>
