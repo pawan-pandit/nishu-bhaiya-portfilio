@@ -88,34 +88,28 @@ export default function FAQSection({ theme = "white" }: FAQSectionProps) {
 
   return (
     <motion.section
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-100px" }}
-      variants={containerVariants}
+    
       className={`py-16 px-4 sm:px-6 lg:px-8 ${theme === "black" ? "bg-gray-900 text-white" : "bg-[#f8f1f3]"}`}
     >
       <div className="max-w-4xl mx-auto">
-        <motion.div variants={itemVariants} className="text-center mb-12">
+        <motion.div  className="text-center mb-12">
           <motion.h2
             className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl uppercase tracking-wider doner font-black pb-10"
-            variants={itemVariants}
           >
             Frequently Asked Questions
           </motion.h2>
 
           <motion.p
             className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl tracking-wider opacity-90 doner leading-relaxed  font-black mb-4 lg:mb-6 text-center"
-            variants={itemVariants}
           >
             Everything you need to know about the program
           </motion.p>
         </motion.div>
 
-        <motion.div variants={itemVariants} className="space-y-4 inter">
+        <motion.div className="space-y-4 inter">
           {faqs.map((faq, index) => (
             <motion.div
               key={index}
-              variants={itemVariants}
               className={`rounded-xl border transition-all duration-300 ${theme === "black"
                 ? "bg-gray-800 border-gray-700 hover:border-gray-600"
                 : "bg-white/80 backdrop-blur-sm border-green-200 hover:border-green-300 shadow-sm hover:shadow-md"
@@ -138,12 +132,11 @@ export default function FAQSection({ theme = "white" }: FAQSectionProps) {
               </button>
 
               <motion.div
-                initial={false}
                 animate={{
                   height: openIndex === index ? "auto" : 0,
                   opacity: openIndex === index ? 1 : 0,
                 }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
+                
                 className="overflow-hidden"
               >
                 <div className="px-6 py-5">

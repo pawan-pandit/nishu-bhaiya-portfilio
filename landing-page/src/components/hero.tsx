@@ -223,9 +223,9 @@ const HeroSection: React.FC = () => {
             >
               This done-with-you program gives you{" "}
               <strong>
-                1:1 strategy calls, private sessions and step-by-step guidance —
+                1:1 strategy calls, step-by-step guidance —
               </strong>{" "}
-              so you can confidently create videos in just{" "}
+              so you can create videos in just{" "}
               <strong>
                 2 hours a week, get more views, create irresistible offers and
                 automated funnels that attract premium clients.

@@ -41,9 +41,8 @@ const IncludeSection: React.FC = () => {
         </h2>
 
         {/* Button motion only */}
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }}>
+        <motion.div >
           <motion.button
-            variants={buttonVariants}
             className="px-8 py-4 text-lg sm:text-xl text-white archivo font-black tracking-wider uppercase rounded-lg transition-all duration-300 bg-[#00e13c] shadow-xl hover:shadow-2xl transform-gpu"
             whileHover={{
               scale: 1.05,
@@ -72,10 +71,7 @@ const IncludeSection: React.FC = () => {
         {features.map((feature, index) => (
           <motion.div
             key={index}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.1 }}
-            variants={itemVariants}
+           
             whileHover={{
               y: -12,
               scale: 1.02,

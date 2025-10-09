@@ -1,21 +1,7 @@
 import React from "react";
 import { motion, Variants, easeOut } from "framer-motion";
 
-const containerVariants: Variants = {
-  hidden: {},
-  visible: {
-    transition: { staggerChildren: 0.1 },
-  },
-};
 
-const itemVariants: Variants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.4, ease: easeOut },
-  },
-};
 
 const IncludeSection: React.FC = () => {
   const features = [
@@ -72,16 +58,12 @@ const IncludeSection: React.FC = () => {
 
       <motion.div
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start max-w-7xl mx-auto"
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
+       
       >
         {features.map((feature, index) => (
           <motion.div
             key={index}
             className="bg-white text-black rounded-lg p-6 shadow-lg hover:shadow-2xl transition-shadow cursor-pointer min-h-[200px] sm:min-h-[220px] md:min-h-[350px]"
-            variants={itemVariants}
             whileHover={{
               y: -8,
               scale: 1.03,

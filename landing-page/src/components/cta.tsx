@@ -10,26 +10,7 @@ interface CTASectionProps {
 export default function CTASection({ theme = "white" }: CTASectionProps) {
     const isWhiteTheme = theme === "white"
 
-    const containerVariants = {
-        hidden: { opacity: 0, y: 50 },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: {
-                duration: 0.8,
-                staggerChildren: 0.2,
-            },
-        },
-    }
-
-    const itemVariants = {
-        hidden: { opacity: 0, y: 30 },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: { duration: 0.6 },
-        },
-    }
+   
 
 
 
@@ -39,13 +20,10 @@ export default function CTASection({ theme = "white" }: CTASectionProps) {
                 ? "bg-gradient-to-br from-[#f8f1f3] via-pink-50 to-rose-50"
                 : "bg-gradient-to-br from-gray-900 via-gray-800 to-black"
                 }`}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={containerVariants}
+           
         >
             <div className=" mx-auto text-center">
-                <motion.div variants={itemVariants} className="mb-4">
+                <motion.div  className="mb-4">
                     <div className="relative rounded-lg p-6 bg-[#0000000d] overflow-hidden">
                         <img
                             src="/long2.png"
